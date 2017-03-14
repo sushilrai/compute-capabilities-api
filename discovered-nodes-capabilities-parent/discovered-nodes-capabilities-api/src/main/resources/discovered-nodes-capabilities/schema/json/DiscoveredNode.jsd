@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "nodeId": {
+      "type": "string"
+    },
+    "symphonyUuid": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "nodeId",
+    "symphonyUuid"
+  ]
+}
