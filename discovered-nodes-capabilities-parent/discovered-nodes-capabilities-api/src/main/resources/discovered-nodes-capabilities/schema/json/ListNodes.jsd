@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "_meta": {
+    "message": "dell.converged.discovered.list.nodes",
+    "version": "1.0",
+    "exchange": "exchange.dell.converged.{providerId}.list.nodes.request",
+    "routingKey": "dell.converged.node.discovered.listed.request",
+    "stereotype": "REQUEST"
+  },
+  "properties": {
+    "messageProperties": {
+      "$ref": "MessageProperties.jsd"
+    },
+    "args": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "messageProperties",
+    "args"
+  ]
+}

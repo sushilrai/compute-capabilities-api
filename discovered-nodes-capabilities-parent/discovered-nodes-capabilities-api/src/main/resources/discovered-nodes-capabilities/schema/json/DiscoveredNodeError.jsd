@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "_meta": {
+    "message": "dell.converged.discovered.nodes.error",
+    "version": "1.0",
+    "exchange": "exchange.dell.converged.{providerId}.node.discovered.error",
+    "routingKey": "dell.converged.node.discovered.listed.error",
+    "stereotype": "ERROR"
+  },
+  "properties": {
+    "messageProperties": {
+      "$ref": "MessageProperties.jsd"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Error",
+        "description": "Localized error message",
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Error code",
+            "description": "One of predefined error codes."
+          },
+          "message": {
+            "type": "string",
+            "title": "Error message",
+            "description": "Error details."
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "messageProperties",
+    "errors"
+  ]
+}
