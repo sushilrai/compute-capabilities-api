@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "action": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "properties": {
+        "ipMacAddresses": {
+          "items": {
+            "properties": {
+              "ipAddress": {
+                "type": "string"
+              },
+              "macAddress": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "nodeId": {
+          "type": "string"
+        },
+        "nodeType": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "nodeId": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "typeId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
