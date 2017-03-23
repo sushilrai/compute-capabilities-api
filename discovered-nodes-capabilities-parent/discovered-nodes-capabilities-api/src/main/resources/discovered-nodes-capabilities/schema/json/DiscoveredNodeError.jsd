@@ -4,8 +4,6 @@
   "_meta": {
     "message": "dell.converged.discovered.nodes.error",
     "version": "1.0",
-    "exchange": "exchange.dell.converged.{providerId}.node.discovered.error",
-    "routingKey": "dell.converged.node.discovered.listed.error",
     "stereotype": "ERROR"
   },
   "properties": {

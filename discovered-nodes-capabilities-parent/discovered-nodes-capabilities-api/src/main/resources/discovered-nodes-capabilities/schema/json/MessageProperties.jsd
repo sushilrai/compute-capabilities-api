@@ -18,7 +18,7 @@
     "replyTo": {
       "type": "string",
       "title": "Reply-to identifier.",
-      "description": "Reply-to identifier. Default format is: '<sender-name>.<sender-host>'"
+      "description": "Reply-to identifier"
     }
   },
   "required": [
