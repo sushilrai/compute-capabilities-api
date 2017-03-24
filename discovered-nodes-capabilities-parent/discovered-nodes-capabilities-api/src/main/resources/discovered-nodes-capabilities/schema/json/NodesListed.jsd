@@ -4,8 +4,6 @@
   "_meta": {
     "message": "dell.converged.discovered.nodes.listed",
     "version": "1.0",
-    "exchange": "exchange.dell.converged.{providerId}.node.discovered.response",
-    "routingKey": "dell.converged.node.discovered.listed.response",
     "stereotype": "REPLY"
   },
   "properties": {

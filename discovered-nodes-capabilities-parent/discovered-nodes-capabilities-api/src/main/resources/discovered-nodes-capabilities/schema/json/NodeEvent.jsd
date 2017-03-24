@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "_meta": {
+    "message": "dell.converged.discovered.compute.node.event",
+    "version": "1.0",
+    "stereotype": "REQUEST"
+  },
+  "properties": {
+    "messageProperties": {
+      "$ref": "MessageProperties.jsd"
+    },
+    "action": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "$ref": "NodeEventData.jsd"
+    },
+    "nodeId": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "typeId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

@@ -4,8 +4,6 @@
   "_meta": {
     "message": "dell.converged.discovered.list.nodes",
     "version": "1.0",
-    "exchange": "exchange.dell.converged.{providerId}.list.nodes.request",
-    "routingKey": "dell.converged.node.discovered.listed.request",
     "stereotype": "REQUEST"
   },
   "properties": {
