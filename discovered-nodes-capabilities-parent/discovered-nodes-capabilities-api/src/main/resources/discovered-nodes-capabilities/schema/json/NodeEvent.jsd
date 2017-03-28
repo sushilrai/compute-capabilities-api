@@ -13,8 +13,7 @@
       "type": "string"
     },
     "createdAt": {
-      "type": "string",
-      "format": "date-time"
+      "type": "string"
     },
     "data": {
       "$ref": "NodeEventData.jsd"
