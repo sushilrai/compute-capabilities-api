@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "_meta": {
+    "message": "com.dell.cpsd.list.catalogs.request",
+    "version": "1.0",
+    "stereotype": "REQUEST"
+  },
+  "properties": {
+    "messageProperties": {
+      "$ref": "MessageProperties.jsd"
+    },
+    "nodeId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
