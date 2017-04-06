@@ -16,8 +16,7 @@
       "type": "string"
     },
     "data": {
-      "type": "object",
-      "javaType" : "java.lang.Object"
+      "$ref": "NodeEventData.jsd"
     },
     "nodeId": {
       "type": "string"
