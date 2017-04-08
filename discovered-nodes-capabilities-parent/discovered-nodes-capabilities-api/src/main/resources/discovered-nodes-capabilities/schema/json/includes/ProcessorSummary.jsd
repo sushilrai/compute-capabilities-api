@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+
+    "model": { "type":"string"},
+    "count": {"javaType":"java.math.BigDecimal"},
+    "status":{"$ref":"Status.jsd"}
+
+  },
+  "type": "object"
+}

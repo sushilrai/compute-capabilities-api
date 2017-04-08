@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+
+    "health": { "type":"string"},
+    "healthRollup": {"type":"string"},
+    "oem": {"$ref":"Oem.jsd"},
+    "state": {"type":"string"}
+  },
+  "type": "object"
+}
