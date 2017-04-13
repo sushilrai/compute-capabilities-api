@@ -63,12 +63,15 @@ pipeline {
                               submoduleCfg: [], 
                               userRemoteConfigs: [[url: 'https://github.com/nexB/scancode-toolkit.git']]])
                 }
-                dir('nexb-output'){
-                    sh "sh /opt/nexB/scancode --help"
-                    sh "sh /opt/nexB/scancode --format html-app ${WORKSPACE} scancode_result.html"
-                    sh "sh /opt/nexB/scancode --format html ${WORKSPACE} minimal.html"
-                }
-                archiveArtifacts '**/nexb-output/**'
+				
+		        sh "mkdir -p /opt/nexB/nexb-output/"
+       
+		        sh "sh /opt/nexB/scancode --help"
+                sh "sh /opt/nexB/scancode --format html ${WORKSPACE} /opt/nexB/nexb-output/minimal.html"
+		        sh "sh /opt/nexB/scancode --format html-app ${WORKSPACE} /opt/nexB/nexb-output/scancode_result.html"
+	       
+	            sh "mv /opt/nexB/nexb-output/ ${WORKSPACE}/"
+	       	    archiveArtifacts '**/nexb-output/**'
             }
         }
         stage('Third Party Audit') {
@@ -84,7 +87,7 @@ pipeline {
         stage('Github Release') {
             when {
                 expression {
-                    return env.BRANCH_NAME ==~ /master|release\/.*/
+                    return env.BRANCH_NAME ==~ /release\/.*/
                 }
             }
             steps {
