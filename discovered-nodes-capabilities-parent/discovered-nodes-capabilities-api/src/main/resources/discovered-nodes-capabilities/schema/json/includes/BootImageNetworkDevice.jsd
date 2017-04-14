@@ -1,0 +1,19 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "javaName":"BootImageNetworkDevice",
+   "properties":{
+      "device":{
+         "type":"string"
+      },
+      "ipv4":{
+         "$ref":"BootImageNetworkAddressV4.jsd"
+      },
+      "ipv6":{
+         "$ref":"BootImageNetworkAddressV6.jsd"
+      }
+   },
+   "required":[
+      "device"
+   ],
+   "type":"object"
+}

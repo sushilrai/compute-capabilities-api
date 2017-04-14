@@ -1,0 +1,25 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "javaName":"BootImageNetworkAddressV6",
+   "properties":{
+      "gateway":{
+         "type":"string"
+      },
+      "ipAddr":{
+         "type":"string"
+      },
+      "netmask":{
+         "type":"string"
+      },
+      "vlanIds":{
+         "items":{
+            "javaType":"java.math.BigDecimal"
+         },
+         "type":"array"
+      }
+   },
+   "required":[
+
+   ],
+   "type":"object"
+}
