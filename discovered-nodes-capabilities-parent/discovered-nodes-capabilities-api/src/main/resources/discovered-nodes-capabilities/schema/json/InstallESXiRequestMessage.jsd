@@ -8,7 +8,7 @@
     },
     "properties":{
        "messageProperties":{
-          "$ref":"includes/MessageProperties.jsd"
+          "$ref":"MessageProperties.jsd"
        },
        "esxiInstallationInfo":{
           "$ref":"includes/ESXIInstallationInfo.jsd"
