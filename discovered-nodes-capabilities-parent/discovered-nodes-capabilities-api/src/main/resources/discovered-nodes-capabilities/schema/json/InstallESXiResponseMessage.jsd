@@ -8,7 +8,7 @@
     },
     "properties":{
        "messageProperties":{
-          "$ref":"includes/MessageProperties.jsd"
+          "$ref":"MessageProperties.jsd"
        },
        "state":{"type": "string"},
        "status":{"type": "string"}
