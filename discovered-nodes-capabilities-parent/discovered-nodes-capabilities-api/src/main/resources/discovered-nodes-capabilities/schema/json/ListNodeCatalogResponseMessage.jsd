@@ -1,43 +1,98 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "_meta": {
-    "message": "com.dell.cpsd.list.node.catalogs.response",
-    "version": "1.0",
-    "stereotype": "RESPONSE"
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "_meta":{
+    "message":"com.dell.cpsd.list.node.catalogs.response",
+    "version":"1.0",
+    "stereotype":"RESPONSE"
   },
-  "properties": {
-    "messageProperties": {
-      "$ref": "MessageProperties.jsd"
+  "properties":{
+    "messageProperties":{
+      "$ref":"MessageProperties.jsd"
     },
-
-    "odataId": { "type":"string"},
-    "odataType": { "type":"string"},
-    "odataContext": { "type":"string"},
-    "assetTag": { "type":"string"},
-    "biosVersion": { "type":"string"},
-    "description": { "type":"string"},
-    "hostName": { "type":"string"},
-    "id": { "type":"string"},
-    "manufacturer": { "type":"string"},
-    "model": { "type":"string"},
-    "name": { "type":"string"},
-    "partNumber": { "type":"string"},
-    "UUID": { "type":"string"},
-    "SKU": { "type":"string"},
-    "serialNumber": { "type":"string"},
-    "indicatorLED": { "type":"string"},
-    "powerState": { "type":"string"},
-    "actions": { "$ref":"includes/Actions.jsd"},
-    "oem": {"$ref":"includes/Oem.jsd"},
-    "boot":{"$ref":"includes/Boot.jsd"},
-    "ethernetInterfaces":{"$ref":"includes/EthernetInterfaces.jsd"},
-    "links":{"$ref":"includes/Links.jsd"},
-    "logServices":{"$ref":"includes/LogServices.jsd"},
-    "processors":{"$ref":"includes/Processors.jsd"},
-    "simpleStorage":{"$ref":"includes/SimpleStorage.jsd"},
-    "memorySummary":{"$ref":"includes/MemorySummary.jsd"},
-    "status":{"$ref":"includes/Status.jsd"},
-    "processorSummary":{"$ref":"includes/ProcessorSummary.jsd"}
+    "odataId":{
+      "type":"string"
+    },
+    "odataType":{
+      "type":"string"
+    },
+    "odataContext":{
+      "type":"string"
+    },
+    "assetTag":{
+      "type":"string"
+    },
+    "biosVersion":{
+      "type":"string"
+    },
+    "description":{
+      "type":"string"
+    },
+    "hostName":{
+      "type":"string"
+    },
+    "id":{
+      "type":"string"
+    },
+    "manufacturer":{
+      "type":"string"
+    },
+    "model":{
+      "type":"string"
+    },
+    "name":{
+      "type":"string"
+    },
+    "partNumber":{
+      "type":"string"
+    },
+    "UUID":{
+      "type":"string"
+    },
+    "SKU":{
+      "type":"string"
+    },
+    "serialNumber":{
+      "type":"string"
+    },
+    "indicatorLED":{
+      "type":"string"
+    },
+    "powerState":{
+      "type":"string"
+    },
+    "actions":{
+      "$ref":"includes/Actions.jsd"
+    },
+    "oem":{
+      "$ref":"includes/Oem.jsd"
+    },
+    "boot":{
+      "$ref":"includes/Boot.jsd"
+    },
+    "ethernetInterfaces":{
+      "$ref":"includes/EthernetInterfaces.jsd"
+    },
+    "links":{
+      "$ref":"includes/Links.jsd"
+    },
+    "logServices":{
+      "$ref":"includes/LogServices.jsd"
+    },
+    "processors":{
+      "$ref":"includes/Processors.jsd"
+    },
+    "simpleStorage":{
+      "$ref":"includes/SimpleStorage.jsd"
+    },
+    "memorySummary":{
+      "$ref":"includes/MemorySummary.jsd"
+    },
+    "status":{
+      "$ref":"includes/Status.jsd"
+    },
+    "processorSummary":{
+      "$ref":"includes/ProcessorSummary.jsd"
+    }
   },
-  "type": "object"
+  "type":"object"
 }

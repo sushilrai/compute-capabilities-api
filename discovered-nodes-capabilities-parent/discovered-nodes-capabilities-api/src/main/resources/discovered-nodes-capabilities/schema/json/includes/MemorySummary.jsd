@@ -1,9 +1,12 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "properties": {
-
-    "status": { "$ref":"Status.jsd"},
-    "totalSystemMemoryGib": {"javaType":"java.math.BigDecimal"}
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "properties":{
+    "status":{
+      "$ref":"Status.jsd"
+    },
+    "totalSystemMemoryGib":{
+      "javaType":"java.math.BigDecimal"
+    }
   },
-  "type": "object"
+  "type":"object"
 }

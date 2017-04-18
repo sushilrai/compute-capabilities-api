@@ -1,16 +1,36 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "properties": {
-
-    "description": { "type":"string"},
-    "members": {"type":"array", "items":{"$ref":"IdRef.jsd"}},
-    "membersodataCount": {"javaType":"java.math.BigDecimal"},
-    "membersodataNavigationLink": {"$ref":"IdRef.jsd"},
-    "name": {"type":"string"},
-    "odataContext": {"type":"string"},
-    "odataId": {"type":"string"},
-    "odataType": {"type":"string"},
-    "oem": {"$ref":"Oem.jsd"}
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "properties":{
+    "description":{
+      "type":"string"
+    },
+    "members":{
+      "type":"array",
+      "items":{
+        "$ref":"IdRef.jsd"
+      }
+    },
+    "membersodataCount":{
+      "javaType":"java.math.BigDecimal"
+    },
+    "membersodataNavigationLink":{
+      "$ref":"IdRef.jsd"
+    },
+    "name":{
+      "type":"string"
+    },
+    "odataContext":{
+      "type":"string"
+    },
+    "odataId":{
+      "type":"string"
+    },
+    "odataType":{
+      "type":"string"
+    },
+    "oem":{
+      "$ref":"Oem.jsd"
+    }
   },
-  "type": "object"
+  "type":"object"
 }
