@@ -1,7 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "_meta": {
+  "additionalProperties" : false,
+ "_meta": {
     "message": "dell.converged.discovered.nodes.error",
     "version": "1.0",
     "stereotype": "ERROR"

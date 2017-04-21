@@ -5,6 +5,7 @@
     "version": "1.0",
     "stereotype": "REQUEST"
   },
+  "additionalProperties" : false,
   "properties": {
     "messageProperties": {
       "$ref": "MessageProperties.jsd"

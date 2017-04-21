@@ -1,0 +1,29 @@
+{
+  "type": "node",
+  "action": "discovered",
+  "typeId": "58aa8e54ef2b49ed6a6cdd4c",
+  "nodeId": "58aa8e54ef2b49ed6a6cdd4c",
+  "severity": "information",
+  "data": {
+    "Context": "context string",
+    "EventId": "8689",
+    "EventTimestamp": "2017-04-11T16:41:29-0500",
+    "EventType": "Alert",
+    "MemberId": "d2573b76-1ef4-11e7-9157-64006ac35232",
+    "Message": "The coin cell battery in CMC 1 is not working.",
+    "MessageArgs": [
+      "1"
+    ],
+    "MessageArgs@odata.count": 1,
+    "MessageId": "CMC8572",
+    "Severity": "Critical",
+    "sourceIpAddress": "10.240.19.130",
+    "nodeId": "58ed1c7cf1f976b2045df983",
+    "macAddress": "64:00:6a:c3:52:32",
+    "ChassisName": "PowerEdge R630",
+    "ServiceTag": "4666482",
+    "SN": "CN747515A80855"
+  },
+  "version": "1.0",
+  "createdAt": "2017-02-20T06:37:23.775Z"
+}
