@@ -1,0 +1,12 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "properties":{
+    "oem":{
+      "javaType":"Object"
+    },
+    "computerSystemReset":{
+      "$ref":"ComputerSystemReset.jsd"
+    }
+  },
+  "type":"object"
+}

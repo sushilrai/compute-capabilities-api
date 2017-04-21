@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "_meta": {
-    "message": "com.dell.cpsd.list.catalogs.request",
+    "message": "com.dell.cpsd.list.node.catalogs.request",
     "version": "1.0",
     "stereotype": "REQUEST"
   },

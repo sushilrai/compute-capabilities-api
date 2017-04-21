@@ -23,6 +23,7 @@ The output of this repository is a jar file.
 
 ## Testing
 Unit tests are run as part of the mvn packaging 
+The project is auto built in Jenkins with automation tests.
 ## Contributing
 
 The Symphony project is a collection of services and libraries housed at https://github.com/dellemc-symphony.
@@ -35,6 +36,6 @@ Reach out to us on Slack #symphony channel. Request an invite at http://communit
 You can also join [Google Groups] (https://groups.google.com/d/forum/dellemc-symphony) and start a discussion. 
 
 ## Licensing
-See [LICENSE.md]
+See [LICENSE.md][licence] provided in project root.
 
 [licence]:https://github.com/dellemc-symphony/compute-capabilities-api/blob/master/LICENSE.md

@@ -1,0 +1,22 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "javaName":"BootImageUsers",
+   "properties":{
+      "name":{
+         "type":"string"
+      },
+      "password":{
+         "type":"string"
+      },
+      "sshKey":{
+         "type":"string"
+      },
+      "uid":{
+         "javaType":"java.math.BigDecimal"
+      }
+   },
+   "required":[
+      "device"
+   ],
+   "type":"object"
+}

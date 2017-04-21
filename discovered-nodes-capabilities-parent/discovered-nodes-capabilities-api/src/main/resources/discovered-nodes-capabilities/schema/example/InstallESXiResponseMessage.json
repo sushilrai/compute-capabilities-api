@@ -1,0 +1,8 @@
+{
+   "messageProperties":{
+      "timestamp":"2017-03-16T15:28:21.927+0000",
+      "correlationId":"1234"
+   },
+   "state":"FINISHED",
+   "status":"SUCCESS"
+}
