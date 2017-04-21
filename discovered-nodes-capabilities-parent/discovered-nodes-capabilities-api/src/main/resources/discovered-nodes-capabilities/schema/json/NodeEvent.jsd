@@ -5,7 +5,7 @@
     "version": "1.0",
     "stereotype": "REQUEST"
   },
-  "additionalProperties" : true,
+  "additionalProperties" : false,
   "properties": {
     "messageProperties": {
       "$ref": "MessageProperties.jsd"
@@ -15,9 +15,6 @@
     },
     "createdAt": {
       "type": "string"
-    },
-    "data": {
-      "$ref": "NodeEventData.jsd"
     },
     "nodeId": {
       "type": "string"

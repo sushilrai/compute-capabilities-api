@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "_meta": {
+    "message": "com.dell.cpsd.component.events.Alert",
+    "version": "1.0",
+    "stereotype": "REQUEST"
+  },
+  "additionalProperties" : false,
+  "properties": {
+    "data": {
+      "$ref": "NodeEventDataDiscovered.jsd"
+    }
+  },
+  "type": "object",
+  "extends" : {
+    "$ref" : "NodeEvent.jsd"
+  }
+}
