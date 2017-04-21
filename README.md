@@ -23,7 +23,6 @@ The output of this repository is a jar file.
 
 ## Testing
 Unit tests are run as part of the mvn packaging 
-The project is auto built in Jenkins with automation tests.
 ## Contributing
 
 The Symphony project is a collection of services and libraries housed at https://github.com/dellemc-symphony.
