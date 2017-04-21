@@ -1,26 +1,12 @@
 [![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
 # compute-capabilities-api
-This repository is used to define a data contract in JSON that is agnostic of the Adapter. 
 ## Description
 ## Documentation
-The schema definition is defined under discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json 
 ## API overview
-Please refer to discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json.
 ## Before you begin
-
 ## Building
-For compilation, Java and Maven should be installed.
-
-Then run the following command:- mvn clean compile
-
 ## Packaging
-For packaging Java and Maven should be installed.
-
-Then run the following command:- mvn clean install
 ## Deploying
-
-The output of this repository is a jar file.
-
 ## Testing
 Unit tests are run as part of the mvn packaging 
 The project is auto built in Jenkins with automation tests.
