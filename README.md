@@ -36,6 +36,6 @@ Reach out to us on Slack #symphony channel. Request an invite at http://communit
 You can also join [Google Groups] (https://groups.google.com/d/forum/dellemc-symphony) and start a discussion. 
 
 ## Licensing
-See [LICENSE.md][licence] provided in project root.
+See [LICENSE.md]
 
 [licence]:https://github.com/dellemc-symphony/compute-capabilities-api/blob/master/LICENSE.md
