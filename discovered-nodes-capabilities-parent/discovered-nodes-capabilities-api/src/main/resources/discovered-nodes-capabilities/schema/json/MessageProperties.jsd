@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "additionalProperties" : false,
   "title": "AMQP properties properties",
   "description": "AMQP properties.",
   "properties": {

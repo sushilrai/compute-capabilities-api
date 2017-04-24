@@ -1,17 +1,4 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "properties": {
-    "ipMacAddresses": {
-      "items": {
-        "$ref": "NodeEventIpMacAddress.jsd"
-      },
-      "type": "array"
-    },
-    "nodeId": {
-      "type": "string"
-    },
-    "nodeType": {
-      "type": "string"
-    }
-  }
+  "type": "object"
 }

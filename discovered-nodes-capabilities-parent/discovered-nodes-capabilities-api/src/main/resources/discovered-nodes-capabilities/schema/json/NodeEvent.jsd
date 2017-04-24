@@ -1,10 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "_meta": {
-    "message": "dell.converged.discovered.compute.node.event",
+    "message": "com.dell.cpsd.component.events.Alert",
     "version": "1.0",
     "stereotype": "REQUEST"
   },
+  "additionalProperties" : false,
   "properties": {
     "messageProperties": {
       "$ref": "MessageProperties.jsd"
@@ -14,9 +15,6 @@
     },
     "createdAt": {
       "type": "string"
-    },
-    "data": {
-      "$ref": "NodeEventData.jsd"
     },
     "nodeId": {
       "type": "string"
