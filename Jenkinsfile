@@ -30,11 +30,11 @@ pipeline {
         stage('Deploy') {
             when {
                 expression {
-                    return env.BRANCH_NAME ==~ /master|release\/.*/
+                    return env.BRANCH_NAME ==~ /master|develop|release\/.*/
                 }
             }
             steps {
-                sh "mvn install"
+                sh "mvn deploy"
             }
         }
         stage('SonarQube Analysis') {
@@ -106,7 +106,6 @@ pipeline {
 				
 		    sh "mkdir -p /opt/nexB/nexb-output/"
        
-		    sh "sh /opt/nexB/scancode --help"
                     sh "sh /opt/nexB/scancode --format html ${WORKSPACE} /opt/nexB/nexb-output/compute-capabilities-api.html"
 		    sh "sh /opt/nexB/scancode --format html-app ${WORKSPACE} /opt/nexB/nexb-output/compute-capabilities-api-grap.html"
 	       
