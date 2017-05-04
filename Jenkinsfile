@@ -34,7 +34,7 @@ pipeline {
                 }
             }
             steps {
-                sh "mvn clean deploy"
+                sh "mvn install"
             }
         }
         stage('SonarQube Analysis') {
@@ -51,27 +51,6 @@ pipeline {
                                 -Dsonar.dependencyCheck.reportPath=${WORKSPACE}/report/dependency-check-report.xml
                         '''    
                 }
-            }
-        }
-        stage('NexB Scan') {
-            steps {
-                dir('/opt') {
-                    checkout([$class: 'GitSCM', 
-                              branches: [[name: '*/master']], 
-                              doGenerateSubmoduleConfigurations: false, 
-                              extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'nexB']], 
-                              submoduleCfg: [], 
-                              userRemoteConfigs: [[url: 'https://github.com/nexB/scancode-toolkit.git']]])
-                }
-				
-		    sh "mkdir -p /opt/nexB/nexb-output/"
-       
-		    sh "sh /opt/nexB/scancode --help"
-                    sh "sh /opt/nexB/scancode --format html ${WORKSPACE} /opt/nexB/nexb-output/compute-capabilities-api.html"
-		    sh "sh /opt/nexB/scancode --format html-app ${WORKSPACE} /opt/nexB/nexb-output/compute-capabilities-api-grap.html"
-	       
-	            sh "mv /opt/nexB/nexb-output/ ${WORKSPACE}/"
-	       	    archiveArtifacts '**/nexb-output/**'
             }
         }
         stage('Third Party Audit') {
@@ -111,6 +90,28 @@ pipeline {
                             --file ${WORKSPACE}/target/compute-capabilities-api-1.0-SNAPSHOT.jar
                     '''
                 }
+            }
+        }
+        stage('NexB Scan') {
+            steps {
+                sh "mvn clean"
+                dir('/opt') {
+                    checkout([$class: 'GitSCM', 
+                              branches: [[name: '*/master']], 
+                              doGenerateSubmoduleConfigurations: false, 
+                              extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'nexB']], 
+                              submoduleCfg: [], 
+                              userRemoteConfigs: [[url: 'https://github.com/nexB/scancode-toolkit.git']]])
+                }
+				
+		    sh "mkdir -p /opt/nexB/nexb-output/"
+       
+		    sh "sh /opt/nexB/scancode --help"
+                    sh "sh /opt/nexB/scancode --format html ${WORKSPACE} /opt/nexB/nexb-output/compute-capabilities-api.html"
+		    sh "sh /opt/nexB/scancode --format html-app ${WORKSPACE} /opt/nexB/nexb-output/compute-capabilities-api-grap.html"
+	       
+	            sh "mv /opt/nexB/nexb-output/ ${WORKSPACE}/"
+	       	    archiveArtifacts '**/nexb-output/**'
             }
         }
     }
