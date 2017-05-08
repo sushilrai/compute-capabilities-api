@@ -3,38 +3,36 @@
 This repository is used to define a data contract in JSON that is agnostic of the Adapter. 
 ## Description
 ## Documentation
-The schema definition is defined under discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json 
+You can find additional documentation for Project Symphony at [dellemc-symphony.readthedocs.io](https://dellemc-symphony.readthedocs.io).
 ## API overview
 Please refer to discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json.
 ## Before you begin
-
+Make sure the following is installed:
+```
+Apache Maven 3.0.5+
+Java Development Kit (version 8)
+```
 ## Building
-For compilation, Java and Maven should be installed.
-
-Then run the following command:- mvn clean compile
-
-## Packaging
-For packaging Java and Maven should be installed.
-
-Then run the following command:- mvn clean install
+Run the following command to build this project:
+```bash
+mvn clean install
+```
 ## Deploying
 
 The output of this repository is a jar file.
 
-## Testing
-Unit tests are run as part of the mvn packaging 
 ## Contributing
+Project Symphony is a collection of services and libraries housed at [GitHub][github].
+Contribute code and make submissions at the relevant GitHub repository level.
+See our documentation for details on how to [contribute][contributing].
+## Community
+Reach out to us on Slack [#symphony][slack] channel. Request an invite at [{code}Community][codecommunity]
+You can also join [Google Groups][googlegroups] and start a discussion.
+ 
+[slack]: https://codecommunity.slack.com/messages/symphony
+[googlegroups]: https://groups.google.com/forum/#!forum/dellemc-symphony
+[codecommunity]: http://community.codedellemc.com/
+[contributing]: http://dellemc-symphony.readthedocs.io/en/latest/contributingtosymphony.html
+[github]: https://github.com/dellemc-symphony
+[documentation]: https://dellemc-symphony.readthedocs.io/en/latest/
 
-The Symphony project is a collection of services and libraries housed at https://github.com/dellemc-symphony.
-Contribute code and make submissions at the relevant GitHub repository level. See our documentation for details on how to contribute.
-
-## Community and Support
-
-
-Reach out to us on Slack #symphony channel. Request an invite at http://community.codedellemc.com.
-You can also join [Google Groups] (https://groups.google.com/d/forum/dellemc-symphony) and start a discussion. 
-
-## Licensing
-See [LICENSE.md]
-
-[licence]:https://github.com/dellemc-symphony/compute-capabilities-api/blob/master/LICENSE.md
