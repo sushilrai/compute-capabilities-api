@@ -18,9 +18,6 @@ Run the following command to build this project:
 ```bash
 mvn clean install
 ```
-## Deploying
-
-The output of this repository is a jar file.
 
 ## Contributing
 Project Symphony is a collection of services and libraries housed at [GitHub][github].
