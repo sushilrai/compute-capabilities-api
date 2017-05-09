@@ -6,7 +6,7 @@ This repository is used to define a data contract in JSON that is agnostic of th
 ## Documentation
 You can find additional documentation for Project Symphony at [dellemc-symphony.readthedocs.io](https://dellemc-symphony.readthedocs.io).
 ## API overview
-Please refer to discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json.
+Please refer to discovered-nodes-capabilities-parent/discovered-nodes-capabilities-api/src/main/resources/discovered-nodes-capabilities/schema/json.
 ## Before you begin
 Make sure the following is installed:
 ```
