@@ -1,8 +1,8 @@
 [![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
 [![Build Status](https://travis-ci.org/dellemc-symphony/compute-capabilities-api.svg?branch=master)](https://travis-ci.org/dellemc-symphony/compute-capabilities-api)
 # compute-capabilities-api
-This repository is used to define a data contract in JSON that is agnostic of the Adapter. 
 ## Description
+This repository is used to define a data contract in JSON that is agnostic of the Adapter. 
 ## Documentation
 You can find additional documentation for Project Symphony at [dellemc-symphony.readthedocs.io](https://dellemc-symphony.readthedocs.io).
 ## API overview
