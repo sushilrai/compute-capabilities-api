@@ -8,7 +8,7 @@
   "additionalProperties" : false,
   "properties": {
     "messageProperties": {
-      "$ref": "MessageProperties.jsd"
+      "$ref": "includes/MessageProperties.jsd"
     },
     "action": {
       "type": "string"

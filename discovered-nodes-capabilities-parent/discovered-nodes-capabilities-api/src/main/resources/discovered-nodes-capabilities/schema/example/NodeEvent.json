@@ -4,25 +4,6 @@
   "typeId": "58aa8e54ef2b49ed6a6cdd4c",
   "nodeId": "58aa8e54ef2b49ed6a6cdd4c",
   "severity": "information",
-  "data": {
-    "ipMacAddresses": [
-      {
-        "ipAddress": "172.31.128.2",
-        "macAddress": "2c:60:0c:ad:d5:ba"
-      },
-      {
-        "macAddress": "90:e2:ba:91:1b:e4"
-      },
-      {
-        "macAddress": "90:e2:ba:91:1b:e5"
-      },
-      {
-        "macAddress": "2c:60:0c:c0:a8:ce"
-      }
-    ],
-    "nodeId": "58aa8e54ef2b49ed6a6cdd4c",
-    "nodeType": "compute"
-  },
   "version": "1.0",
   "createdAt": "2017-02-20T06:37:23.775Z"
 }

@@ -1,0 +1,9 @@
+{
+  "messageProperties": {
+    "timestamp": "2010-01-01T12:00:00Z",
+    "correlationId": "1234",
+    "replyTo": "rackhd.localhost"
+  },
+  "orderID": "12345",
+  "ipAddress" : "111.111.111.111"
+}

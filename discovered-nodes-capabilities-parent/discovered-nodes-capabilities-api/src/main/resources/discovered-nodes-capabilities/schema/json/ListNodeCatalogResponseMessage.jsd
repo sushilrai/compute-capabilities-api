@@ -7,7 +7,7 @@
   },
   "properties":{
     "messageProperties":{
-      "$ref":"MessageProperties.jsd"
+      "$ref":"includes/MessageProperties.jsd"
     },
     "odataId":{
       "type":"string"

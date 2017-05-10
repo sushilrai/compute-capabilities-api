@@ -9,7 +9,7 @@
   },
   "properties": {
     "messageProperties": {
-      "$ref": "MessageProperties.jsd"
+      "$ref": "includes/MessageProperties.jsd"
     },
     "args": {
       "type": "array",

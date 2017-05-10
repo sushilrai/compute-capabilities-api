@@ -8,7 +8,7 @@
   "additionalProperties" : false,
   "properties": {
     "data": {
-      "$ref": "NodeEventDataDiscovered.jsd"
+      "$ref": "includes/NodeEventDataDiscovered.jsd"
     }
   },
   "type": "object",
