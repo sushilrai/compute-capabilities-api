@@ -32,7 +32,7 @@ public class ValidateExamplesTest
 {
     public static final String SCHEMA_DIR   = "/discovered-nodes-capabilities/schema/json/";
     public static final String EXAMPLE_DIR  = "/discovered-nodes-capabilities/schema/example/";
-    public static final String INCLUDES_DIR = SCHEMA_DIR;
+    public static final String INCLUDES_DIR = SCHEMA_DIR + "includes/";
 
     @Parameterized.Parameters(name = "{index}: {0} model test")
     public static List<String> getExamples() throws URISyntaxException {

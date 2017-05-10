@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "OrderAckMessage",
+  "description": "This message comes from the adapter and gets sent to fru-paqx",
+  "_meta": {
+     "message":"com.dell.cpsd.coprhd.order.ack",
+     "version":"1.0"
+  },
+  "type" : "object",
+  "id" : "OrderAckMessage.jsd",
+  "properties" : {
+    "messageProperties" : {
+      "type" : "object",
+      "$ref" : "includes/MessageProperties.jsd"
+    },
+    "orderId" : {
+      "type" : "string"
+    },
+    "ipAddress" : {
+      "type" : "string"
+    }
+  }
+}
