@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy') {
             when {
                 expression {
-                    return env.BRANCH_NAME ==~ /master|develop|release\/.*/
+                    return env.BRANCH_NAME ==~ /develop|release\/.*/
                 }
             }
             steps {
@@ -66,7 +66,7 @@ pipeline {
         stage('Github Release') {
             when {
                 expression {
-                    return env.BRANCH_NAME ==~ /release\/.*/
+                    return env.BRANCH_NAME ==~ /master|release\/.*/
                 }
             }
             steps {
@@ -93,6 +93,11 @@ pipeline {
             }
         }
         stage('NexB Scan') {
+            when {
+                expression {
+                    return env.BRANCH_NAME ==~ /master|develop|release\/.*/
+                }
+            }
             steps {
                 sh "mvn clean"
                 dir('/opt') {
