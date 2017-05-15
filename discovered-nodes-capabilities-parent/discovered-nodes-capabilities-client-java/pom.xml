@@ -74,7 +74,7 @@
             <plugin>
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.4.27</version>
+                <version>0.4.34</version>
                 <dependencies>
                     <dependency>
                         <groupId>com.dell.cpsd.common.messaging</groupId>
@@ -100,6 +100,7 @@
                             <includeAdditionalProperties>false</includeAdditionalProperties>
                             <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
                             <customRuleFactory>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.DefaultRuleFactory</customRuleFactory>
+                            <sourceSortOrder>FILES_FIRST</sourceSortOrder>
                         </configuration>
                     </execution>
                 </executions>
