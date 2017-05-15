@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "description": "Request message sent for OBM settings",
+    "_meta":{
+        "message":"com.dell.set.node.obm.setting.request",
+        "version":"1.0"
+    },
+    "properties": {
+         "messageProperties":{
+                  "$ref":"includes/MessageProperties.jsd"
+         },
+        "nodeID": {"type": "string"},
+        "obmConfig": {
+          "type":"object"
+        },
+        "service": {"type": "string"}
+    },
+    "required": [
+        "service",
+        "nodeID"
+    ]
+
+}

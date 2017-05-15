@@ -1,0 +1,17 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "host": {"type": "string"},
+    "password": {"type": "string"},
+    "protocol": {"type": "string"},
+    "root": {"type": "string"},
+    "uri": {"type": "string"},
+    "user": {"type": "string"}
+  },
+  "required": [
+    "host",
+    "user",
+    "password"
+   ],
+  "type": "object"
+}
