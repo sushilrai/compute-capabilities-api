@@ -3,7 +3,7 @@
     "type":"object",
     "description":"Response message sent to install ESxi.",
     "_meta":{
-       "message":"cpsd.controlplane.hypervisor.esxi.install.response",
+       "message":"cpsd.controlplane.hardware.esxi.install.response",
        "version":"1.0"
     },
     "properties":{
