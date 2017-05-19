@@ -34,6 +34,10 @@
         <url>https://github.com/dellemc-symphony/compute-capabilities-api/tree/master</url>
     </scm>
 
+    <properties>
+        <plugin-maven-compiler-version>3.3</plugin-maven-compiler-version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -90,6 +94,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${plugin-maven-compiler-version}</version>
                 <executions>
                     <execution>
                         <id>default-compile</id>
