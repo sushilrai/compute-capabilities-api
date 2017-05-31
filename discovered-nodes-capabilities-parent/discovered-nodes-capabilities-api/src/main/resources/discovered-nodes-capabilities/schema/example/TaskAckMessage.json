@@ -4,6 +4,7 @@
     "correlationId": "1234",
     "replyTo": "rackhd.localhost"
   },
-  "orderID": "12345",
-  "ipAddress" : "111.111.111.111"
+  "taskId": "12345",
+  "operationType" : "Install ESXi",
+  "ipAddress" : "1.2.3.4"
 }

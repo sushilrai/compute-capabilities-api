@@ -1,0 +1,21 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Response to an consul registration query response.",
+    "_meta":{
+       "message":"com.dell.cpsd.rackhd.registration.info.response",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"includes/MessageProperties.jsd"
+       },
+       "responseInfo":{
+          "$ref":"includes/ConsulRegisterResponseInfo.jsd"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "responseInfo"
+    ]
+}
