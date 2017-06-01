@@ -63,6 +63,11 @@ pipeline {
                 archiveArtifacts '**/dependency-analysis.html, **/THIRD-PARTY.txt, **/dependency-check-report.html, **/dependency-tree.dot'
             }
         }
+	stage('PasswordScan') {
+		    steps {
+			    doPwScan()
+		    }
+	}
         stage('Github Release') {
             when {
                 expression {
