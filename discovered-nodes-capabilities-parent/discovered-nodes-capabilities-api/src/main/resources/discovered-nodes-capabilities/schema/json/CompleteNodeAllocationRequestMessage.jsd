@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties" : false,
+  "_meta": {
+    "message": "dell.converged.discovered.nodes.complete.node.allocation.request",
+    "version": "1.0",
+    "stereotype": "REQUEST"
+  },
+  "properties": {
+    "messageProperties": {
+      "$ref": "includes/MessageProperties.jsd"
+    },
+    "elementIdentifier": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "messageProperties",
+    "elementIdentifier"
+  ]
+}

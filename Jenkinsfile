@@ -28,11 +28,6 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when {
-                expression {
-                    return env.BRANCH_NAME ==~ /develop|release\/.*/
-                }
-            }
             steps {
                 sh "mvn deploy -DskipTests=true -DskipITs"
             }
