@@ -1,0 +1,26 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "javaName": "NodeRaidConfigurationResponseMessage",
+    "description":"Response to Rackhd Node Raid configuration settings response",
+    "_meta":{
+       "message":"com.dell.cpsd.rackhd.node.raid.setting.response",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"includes/MessageProperties.jsd"
+       },
+       "status": {
+           "enum": [
+               "SUCCESS",
+               "FAILED"
+           ],
+           "type": "string"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "status"
+    ]
+}
