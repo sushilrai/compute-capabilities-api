@@ -18,6 +18,7 @@ pipeline {
         GITHUB_TOKEN = credentials('github-02')
     }
     options { 
+        skipDefaultCheckout()
         buildDiscarder(logRotator(artifactDaysToKeepStr: '30', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '5'))
         timestamps()
         disableConcurrentBuilds()
@@ -27,6 +28,11 @@ pipeline {
         jdk 'linux-jdk1.8.0_102'
     }
     stages {
+        stage('Checkout') {
+            steps {
+                doCheckout()
+	    }
+	}
         stage('Compile') {
             steps {
                 sh "mvn install -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
@@ -84,18 +90,10 @@ pipeline {
             cleanWorkspace()
         }
         success {
-            emailext attachLog: true, 
-                body: 'Pipeline job ${JOB_NAME} success. Build URL: ${BUILD_URL}', 
-                recipientProviders: [[$class: 'CulpritsRecipientProvider']], 
-                subject: 'SUCCESS: Jenkins Job- ${JOB_NAME} Build No- ${BUILD_NUMBER}', 
-                to: 'pebuildrelease@vce.com'            
+            successEmail()
         }
         failure {
-            emailext attachLog: true, 
-                body: 'Pipeline job ${JOB_NAME} failed. Build URL: ${BUILD_URL}', 
-                recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider'], [$class: 'FailingTestSuspectsRecipientProvider'], [$class: 'UpstreamComitterRecipientProvider']], 
-                subject: 'FAILED: Jenkins Job- ${JOB_NAME} Build No- ${BUILD_NUMBER}', 
-                to: 'pebuildrelease@vce.com'
+            failureEmail()
         }
     }
 }
