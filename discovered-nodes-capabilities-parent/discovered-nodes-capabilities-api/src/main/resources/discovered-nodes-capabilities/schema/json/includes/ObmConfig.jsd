@@ -1,12 +1,26 @@
 {
-  "$schema":"http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "ObmConfig",
+  "additionalProperties" : false,
   "properties": {
-    "host": {"type": "string"},
-    "password": {"type": "string"},
-    "protocol": {"type": "string"},
-    "root": {"type": "string"},
-    "uri": {"type": "string"},
-    "user": {"type": "string"}
+    "host": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string"
+    },
+    "root": {
+      "type": "string"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string"
+    }
   },
   "required": [
     "host",

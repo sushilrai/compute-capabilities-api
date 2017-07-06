@@ -12,7 +12,7 @@
          },
         "nodeID": {"type": "string"},
         "obmConfig": {
-          "type":"object"
+          "$ref":"includes/ObmConfig.jsd"
         },
         "service": {"type": "string"}
     },
