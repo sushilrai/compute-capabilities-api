@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaName": "ObmConfig",
-  "additionalProperties" : false,
+  "additionalProperties" : true,
   "properties": {
     "host": {
       "type": "string"
