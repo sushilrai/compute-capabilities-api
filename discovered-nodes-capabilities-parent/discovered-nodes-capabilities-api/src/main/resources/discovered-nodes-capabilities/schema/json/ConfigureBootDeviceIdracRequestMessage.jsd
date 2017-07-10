@@ -10,9 +10,17 @@
   "properties": {
     "messageProperties": {
       "$ref": "includes/MessageProperties.jsd"
+    },
+    "nodeID": {
+        "type": "string"
+    },
+    "ipAddress": {
+        "type": "string"
     }
   },
   "required": [
-    "messageProperties"
+    "messageProperties",
+    "nodeID",
+    "ipAddress"
   ]
 }
