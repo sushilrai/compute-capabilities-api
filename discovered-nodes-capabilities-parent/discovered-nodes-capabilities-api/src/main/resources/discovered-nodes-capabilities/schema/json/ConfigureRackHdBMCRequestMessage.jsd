@@ -1,0 +1,29 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Request message sent to configure BMC Credentials",
+    "_meta":{
+       "message":"cpsd.controlplane.hypervisor.configure.bmc.request",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"includes/MessageProperties.jsd"
+       },
+       "username":{
+          "type":"string"
+       },
+       "password": {
+          "type": "string"
+       },
+       "nodeId" : {
+          "type": "string"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "username",
+       "password",
+       "nodeId"
+    ]
+}
