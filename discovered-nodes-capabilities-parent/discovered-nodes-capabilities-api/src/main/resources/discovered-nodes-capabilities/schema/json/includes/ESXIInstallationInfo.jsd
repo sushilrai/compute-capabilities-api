@@ -4,6 +4,9 @@
       "domain":{
          "type":"string"
       },
+      "kargs":{
+         "type":"string"
+      },
       "hostname":{
          "type":"string"
       },
@@ -31,6 +34,18 @@
       "dnsServers":{
          "items":{
             "type":"string"
+         },
+         "type":"array"
+      },
+      "ntpServers":{
+         "items":{
+            "type":"string"
+         },
+         "type":"array"
+      },
+      "switchDevices":{
+         "items":{
+            "$ref":"NodeWorkflowSwitchDevice.jsd"
          },
          "type":"array"
       },

@@ -1,0 +1,22 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "javaName":"NodeWorkflowSwitchDevice",
+   "properties":{
+      "switchName":{
+         "type":"string"
+      },
+      "failoverPolicy":{
+         "type":"string"
+      },
+      "uplinks":{
+        "items":{
+          "type":"string"
+        },
+        "type":"array"
+      }
+   },
+   "required":[
+      "switchName"
+   ],
+   "type":"object"
+}
