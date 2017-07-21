@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties" : false,
+  "_meta": {
+    "message": "com.dell.cpsd.rackhd.adapter.model.idrac.IdracNetworkSettingsRequestMessage",
+    "version": "1.0"
+  },
+  "properties": {
+    "messageProperties": {
+      "javaType": "com.dell.cpsd.rackhd.adapter.rabbitmq.MessageProperties"
+    },
+    "idracNetworkSettings": {
+      "$ref": "IdracNetworkSettings.jsd"
+    }
+  },
+  "required": [
+    "messageProperties",
+    "idracNetworkSettings"
+  ]
+}

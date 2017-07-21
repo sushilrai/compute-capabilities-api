@@ -107,6 +107,61 @@
             </plugin>
 
             <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>0.4.34</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.dell.cpsd.common.messaging</groupId>
+                        <artifactId>common-contract-enricher</artifactId>
+                        <version>1.4-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>generate-common-classes-model-idrac</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.build.directory}/dependency/discovered-nodes-capabilities/schema/json/includes/MessageProperties.jsd</sourceDirectory>
+                            <targetPackage>com.dell.cpsd.rackhd.adapter.rabbitmq</targetPackage>
+                            <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities-idrac</outputDirectory>
+                            <removeOldOutput>true</removeOldOutput>
+                            <includeConstructors>true</includeConstructors>
+                            <serializable>false</serializable>
+                            <useCommonsLang3>true</useCommonsLang3>
+                            <includeAdditionalProperties>false</includeAdditionalProperties>
+                            <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
+                            <customRuleFactory>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.DefaultRuleFactory</customRuleFactory>
+                            <sourceSortOrder>FILES_FIRST</sourceSortOrder>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-classes-model-idrac</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.build.directory}/dependency/discovered-nodes-capabilities/schema/idrac</sourceDirectory>
+                            <targetPackage>com.dell.cpsd.rackhd.adapter.model.idrac</targetPackage>
+                            <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities-idrac</outputDirectory>
+                            <!--<removeOldOutput>true</removeOldOutput>-->
+                            <includeConstructors>true</includeConstructors>
+                            <serializable>false</serializable>
+                            <useCommonsLang3>true</useCommonsLang3>
+                            <includeAdditionalProperties>false</includeAdditionalProperties>
+                            <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
+                            <customRuleFactory>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.DefaultRuleFactory</customRuleFactory>
+                            <sourceSortOrder>FILES_FIRST</sourceSortOrder>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco-maven-plugin.version}</version>

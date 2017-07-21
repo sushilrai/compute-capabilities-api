@@ -12,6 +12,10 @@
             <directory>src/main/resources/discovered-nodes-capabilities/schema/json</directory>
         </fileSet>
         <fileSet>
+            <outputDirectory>discovered-nodes-capabilities/schema/idrac</outputDirectory>
+            <directory>src/main/resources/discovered-nodes-capabilities/schema/idrac</directory>
+        </fileSet>
+        <fileSet>
             <outputDirectory>discovered-nodes-capabilities/schema/example</outputDirectory>
             <directory>src/main/resources/discovered-nodes-capabilities/schema/example</directory>
         </fileSet>
