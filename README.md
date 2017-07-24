@@ -1,40 +1,37 @@
 [![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+[![Build Status](https://travis-ci.org/dellemc-symphony/compute-capabilities-api.svg?branch=master)](https://travis-ci.org/dellemc-symphony/compute-capabilities-api)
+[![Slack](http://community.codedellemc.com/badge.svg)](https://codecommunity.slack.com/messages/symphony)
+[![codecov](https://codecov.io/gh/dellemc-symphony/compute-capabilities-api/branch/master/graph/badge.svg)](https://codecov.io/gh/dellemc-symphony/compute-capabilities-api)
+[![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
 # compute-capabilities-api
-This repository is used to define a data contract in JSON that is agnostic of the Adapter. 
 ## Description
+Use this repository to define a data contract in JSON that is adapter agnostic. 
 ## Documentation
-The schema definition is defined under discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json 
+You can find additional documentation for Project Symphony at [dellemc-symphony.readthedocs.io][documentation].
 ## API overview
-Please refer to discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json.
+Please refer to discovered-nodes-capabilities-parent/discovered-nodes-capabilities-api/src/main/resources/discovered-nodes-capabilities/schema/json.
 ## Before you begin
-
+Verify that the following tools are installed:
+ 
+* Apache Maven 3.0.5+
+* Java Development Kit (version 8)
 ## Building
-For compilation, Java and Maven should be installed.
+Run the following command to build this project:
+```bash
+mvn clean install
+```
 
-Then run the following command:- mvn clean compile
-
-## Packaging
-For packaging Java and Maven should be installed.
-
-Then run the following command:- mvn clean install
-## Deploying
-
-The output of this repository is a jar file.
-
-## Testing
-Unit tests are run as part of the mvn packaging 
 ## Contributing
+Project Symphony is a collection of services and libraries housed at [GitHub][github].
+Contribute code and make submissions at the relevant GitHub repository level. See [our documentation][contributing] for details on how to contribute.
+## Community
+Reach out to us on the Slack [#symphony][slack] channel by requesting an invite at [{code}Community][codecommunity].
+You can also join [Google Groups][googlegroups] and start a discussion.
+ 
+[slack]: https://codecommunity.slack.com/messages/symphony
+[googlegroups]: https://groups.google.com/forum/#!forum/dellemc-symphony
+[codecommunity]: http://community.codedellemc.com/
+[contributing]: http://dellemc-symphony.readthedocs.io/en/latest/contributingtosymphony.html
+[github]: https://github.com/dellemc-symphony
+[documentation]: https://dellemc-symphony.readthedocs.io/en/latest/
 
-The Symphony project is a collection of services and libraries housed at https://github.com/dellemc-symphony.
-Contribute code and make submissions at the relevant GitHub repository level. See our documentation for details on how to contribute.
-
-## Community and Support
-
-
-Reach out to us on Slack #symphony channel. Request an invite at http://community.codedellemc.com.
-You can also join [Google Groups] (https://groups.google.com/d/forum/dellemc-symphony) and start a discussion. 
-
-## Licensing
-See [LICENSE.md]
-
-[licence]:https://github.com/dellemc-symphony/compute-capabilities-api/blob/master/LICENSE.md
