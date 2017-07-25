@@ -4,17 +4,23 @@
 [![codecov](https://codecov.io/gh/dellemc-symphony/compute-capabilities-api/branch/master/graph/badge.svg)](https://codecov.io/gh/dellemc-symphony/compute-capabilities-api)
 [![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
 # compute-capabilities-api
+
 ## Description
 Use this repository to define a data contract in JSON that is adapter agnostic. 
+
 ## Documentation
 You can find additional documentation for Project Symphony at [dellemc-symphony.readthedocs.io][documentation].
+ 
 ## API overview
-Please refer to discovered-nodes-capabilities-parent/discovered-nodes-capabilities-api/src/main/resources/discovered-nodes-capabilities/schema/json.
+Refer to discovered-nodes-capabilities-parent\discovered-nodes-capabilities-api\src\main\resources\discovered-nodes-capabilities\schema\json.
+
 ## Before you begin
 Verify that the following tools are installed:
  
 * Apache Maven 3.0.5+
 * Java Development Kit (version 8)
+
+
 ## Building
 Run the following command to build this project:
 ```bash
@@ -23,9 +29,12 @@ mvn clean install
 
 ## Contributing
 Project Symphony is a collection of services and libraries housed at [GitHub][github].
+ 
 Contribute code and make submissions at the relevant GitHub repository level. See [our documentation][contributing] for details on how to contribute.
+
 ## Community
 Reach out to us on the Slack [#symphony][slack] channel by requesting an invite at [{code}Community][codecommunity].
+
 You can also join [Google Groups][googlegroups] and start a discussion.
  
 [slack]: https://codecommunity.slack.com/messages/symphony
@@ -34,4 +43,3 @@ You can also join [Google Groups][googlegroups] and start a discussion.
 [contributing]: http://dellemc-symphony.readthedocs.io/en/latest/contributingtosymphony.html
 [github]: https://github.com/dellemc-symphony
 [documentation]: https://dellemc-symphony.readthedocs.io/en/latest/
-
