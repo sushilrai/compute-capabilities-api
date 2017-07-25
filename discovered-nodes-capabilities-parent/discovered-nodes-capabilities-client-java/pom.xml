@@ -94,10 +94,11 @@
                             <targetPackage>com.dell.converged.capabilities.compute.discovered.nodes.api</targetPackage>
                             <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities</outputDirectory>
                             <removeOldOutput>true</removeOldOutput>
+                            <generateBuilders>true</generateBuilders>
                             <includeConstructors>true</includeConstructors>
                             <serializable>false</serializable>
                             <useCommonsLang3>true</useCommonsLang3>
-                            <includeAdditionalProperties>false</includeAdditionalProperties>
+                            <includeAdditionalProperties>true</includeAdditionalProperties>
                             <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
                             <customRuleFactory>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.DefaultRuleFactory</customRuleFactory>
                             <sourceSortOrder>FILES_FIRST</sourceSortOrder>
@@ -129,6 +130,7 @@
                             <targetPackage>com.dell.cpsd.rackhd.adapter.rabbitmq</targetPackage>
                             <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities-idrac</outputDirectory>
                             <removeOldOutput>true</removeOldOutput>
+                            <generateBuilders>true</generateBuilders>
                             <includeConstructors>true</includeConstructors>
                             <serializable>false</serializable>
                             <useCommonsLang3>true</useCommonsLang3>
@@ -149,6 +151,7 @@
                             <targetPackage>com.dell.cpsd.rackhd.adapter.model.idrac</targetPackage>
                             <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities-idrac</outputDirectory>
                             <!--<removeOldOutput>true</removeOldOutput>-->
+                            <generateBuilders>true</generateBuilders>
                             <includeConstructors>true</includeConstructors>
                             <serializable>false</serializable>
                             <useCommonsLang3>true</useCommonsLang3>
