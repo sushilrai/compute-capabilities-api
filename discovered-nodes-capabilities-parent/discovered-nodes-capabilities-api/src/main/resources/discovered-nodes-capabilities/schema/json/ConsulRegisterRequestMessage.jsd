@@ -1,21 +1,21 @@
 {
     "$schema":"http://json-schema.org/draft-04/schema#",
     "type":"object",
-    "description":"Response message sent to install ESxi.",
+    "description":"Response to an consul registration query request.",
     "_meta":{
-       "message":"cpsd.controlplane.hardware.esxi.install.response",
+       "message":"com.dell.cpsd.rackhd.registration.info.request",
        "version":"1.0"
     },
     "properties":{
        "messageProperties":{
           "$ref":"includes/MessageProperties.jsd"
        },
-       "state":{"type": "string"},
-       "status":{"type": "string"}
+       "registrationInfo":{
+          "$ref":"includes/RegistrationInfo.jsd"
+       }
     },
     "required":[
        "messageProperties",
-       "state",
-       "status"
+       "registrationInfo"
     ]
 }

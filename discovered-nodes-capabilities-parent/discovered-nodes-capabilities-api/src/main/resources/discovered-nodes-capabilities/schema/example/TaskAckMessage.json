@@ -1,0 +1,10 @@
+{
+  "messageProperties": {
+    "timestamp": "2010-01-01T12:00:00Z",
+    "correlationId": "1234",
+    "replyTo": "rackhd.localhost"
+  },
+  "taskId": "12345",
+  "operationType" : "Install ESXi",
+  "ipAddress" : "1.2.3.4"
+}

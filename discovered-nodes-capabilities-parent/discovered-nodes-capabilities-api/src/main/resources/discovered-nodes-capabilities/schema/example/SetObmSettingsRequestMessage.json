@@ -1,0 +1,17 @@
+{
+  "messageProperties": {
+    "timestamp": "2010-01-01T12:00:00Z",
+    "correlationId": "1234",
+    "replyTo": "rackhd.localhost"
+  },
+  "obmConfig": {
+    "host": "10.240.19.130",
+    "user": "root",
+    "password": "8j3JL+Wc5r",
+    "root": "/v1/redfish",
+    "protocol": "https",
+    "uri": "10.240.19.130"
+  },
+  "service": "redfish-obm-service",
+  "nodeID": "59022f3778b7113d2dd8180f"
+}

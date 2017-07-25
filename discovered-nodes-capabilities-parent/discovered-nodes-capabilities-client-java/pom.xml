@@ -8,7 +8,7 @@
     <parent>
         <groupId>com.dell.converged.capabilities.compute</groupId>
         <artifactId>discovered-nodes-capabilities-parent</artifactId>
-        <version>1.0</version>
+        <version>1.1-SNAPSHOT</version>
     </parent>
 
     <licenses>
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>com.dell.cpsd.common.messaging</groupId>
             <artifactId>common-rabbitmq</artifactId>
-            <version>1.3</version>
+            <version>1.4-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -74,12 +74,12 @@
             <plugin>
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.4.27</version>
+                <version>0.4.34</version>
                 <dependencies>
                     <dependency>
                         <groupId>com.dell.cpsd.common.messaging</groupId>
                         <artifactId>common-contract-enricher</artifactId>
-                        <version>1.3</version>
+                        <version>1.4-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -94,12 +94,71 @@
                             <targetPackage>com.dell.converged.capabilities.compute.discovered.nodes.api</targetPackage>
                             <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities</outputDirectory>
                             <removeOldOutput>true</removeOldOutput>
+                            <generateBuilders>true</generateBuilders>
+                            <includeConstructors>true</includeConstructors>
+                            <serializable>false</serializable>
+                            <useCommonsLang3>true</useCommonsLang3>
+                            <includeAdditionalProperties>true</includeAdditionalProperties>
+                            <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
+                            <customRuleFactory>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.DefaultRuleFactory</customRuleFactory>
+                            <sourceSortOrder>FILES_FIRST</sourceSortOrder>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>0.4.34</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.dell.cpsd.common.messaging</groupId>
+                        <artifactId>common-contract-enricher</artifactId>
+                        <version>1.4-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>generate-common-classes-model-idrac</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.build.directory}/dependency/discovered-nodes-capabilities/schema/json/includes/MessageProperties.jsd</sourceDirectory>
+                            <targetPackage>com.dell.cpsd.rackhd.adapter.rabbitmq</targetPackage>
+                            <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities-idrac</outputDirectory>
+                            <removeOldOutput>true</removeOldOutput>
+                            <generateBuilders>true</generateBuilders>
                             <includeConstructors>true</includeConstructors>
                             <serializable>false</serializable>
                             <useCommonsLang3>true</useCommonsLang3>
                             <includeAdditionalProperties>false</includeAdditionalProperties>
                             <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
                             <customRuleFactory>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.DefaultRuleFactory</customRuleFactory>
+                            <sourceSortOrder>FILES_FIRST</sourceSortOrder>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-classes-model-idrac</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.build.directory}/dependency/discovered-nodes-capabilities/schema/idrac</sourceDirectory>
+                            <targetPackage>com.dell.cpsd.rackhd.adapter.model.idrac</targetPackage>
+                            <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities-idrac</outputDirectory>
+                            <!--<removeOldOutput>true</removeOldOutput>-->
+                            <generateBuilders>true</generateBuilders>
+                            <includeConstructors>true</includeConstructors>
+                            <serializable>false</serializable>
+                            <useCommonsLang3>true</useCommonsLang3>
+                            <includeAdditionalProperties>false</includeAdditionalProperties>
+                            <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
+                            <customRuleFactory>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.DefaultRuleFactory</customRuleFactory>
+                            <sourceSortOrder>FILES_FIRST</sourceSortOrder>
                         </configuration>
                     </execution>
                 </executions>
@@ -135,6 +194,14 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/../../</directory>
+                <includes>
+                    <include>LICENSE.md</include>
+                </includes>
+            </resource> 
+        </resources>
     </build>
 
 </project>

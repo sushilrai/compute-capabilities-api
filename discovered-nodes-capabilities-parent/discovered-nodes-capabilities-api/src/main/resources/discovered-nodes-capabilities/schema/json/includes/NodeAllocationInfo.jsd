@@ -1,11 +1,11 @@
 {
-  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties" : false,
   "properties": {
-    "nodeId": {
+    "elementIdentifier": {
       "type": "string"
     },
-    "convergedUuid": {
+    "nodeIdentifier": {
       "type": "string"
     },
     "allocationStatus": {
@@ -17,9 +17,5 @@
        ],
        "type": "string"
     }
-  },
-  "required": [
-    "nodeId",
-    "symphonyUuid"
-  ]
+  }
 }

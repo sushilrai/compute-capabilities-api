@@ -10,6 +10,9 @@
       },
       "ipv6":{
          "$ref":"BootImageNetworkAddressV6.jsd"
+      },
+      "esxSwitchName":{
+         "type":"string"
       }
    },
    "required":[

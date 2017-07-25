@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "javaName": "ResponseInfo",
+    "properties": {
+        "message": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "message"
+    ],
+    "type": "object"
+}
+

@@ -3,12 +3,12 @@
     "type":"object",
     "description":"Request message sent to install ESXi.",
     "_meta":{
-       "message":"cpsd.controlplane.hypervisor.esxi.install",
+       "message":"cpsd.controlplane.hardware.esxi.install",
        "version":"1.0"
     },
     "properties":{
        "messageProperties":{
-          "$ref":"MessageProperties.jsd"
+          "$ref":"includes/MessageProperties.jsd"
        },
        "esxiInstallationInfo":{
           "$ref":"includes/ESXIInstallationInfo.jsd"
@@ -16,6 +16,6 @@
     },
     "required":[
        "messageProperties",
-       "registrationInfo"
+       "esxiInstallationInfo"
     ]
 }

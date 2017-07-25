@@ -8,12 +8,12 @@
     <groupId>com.dell.converged.capabilities.compute</groupId>
     <artifactId>discovered-nodes-capabilities-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
 
     <parent>
         <groupId>com.dell.cpsd</groupId>
         <artifactId>root-parent</artifactId>
-        <version>0.2.4</version>
+        <version>0.2.5</version>
     </parent>
 
     <licenses>

@@ -3,7 +3,7 @@
   "type": "object",
   "additionalProperties" : false,
  "_meta": {
-    "message": "dell.converged.discovered.list.nodes",
+    "message": "dell.converged.discovered.nodes.lookup.node.allocation.request",
     "version": "1.0",
     "stereotype": "REQUEST"
   },
@@ -11,15 +11,12 @@
     "messageProperties": {
       "$ref": "includes/MessageProperties.jsd"
     },
-    "args": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    "elementIdentifier": {
+      "type": "string"
     }
   },
   "required": [
     "messageProperties",
-    "args"
+    "elementIdentifier"
   ]
 }

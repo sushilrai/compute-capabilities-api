@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties" : false,
- "_meta": {
-    "message": "dell.converged.discovered.list.nodes",
+  "_meta": {
+    "message": "dell.converged.discovered.nodes.cancel.node.allocation.request",
     "version": "1.0",
     "stereotype": "REQUEST"
   },
@@ -11,15 +11,12 @@
     "messageProperties": {
       "$ref": "includes/MessageProperties.jsd"
     },
-    "args": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    "elementIdentifier": {
+      "type": "string"
     }
   },
   "required": [
     "messageProperties",
-    "args"
+    "elementIdentifier"
   ]
 }

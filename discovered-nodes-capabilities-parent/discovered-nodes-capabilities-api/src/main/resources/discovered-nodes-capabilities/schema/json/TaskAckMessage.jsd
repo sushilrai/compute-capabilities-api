@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "TaskAckMessage",
+  "description": "This message is sent to acknowledge that a request has been received and is in progress",
+  "_meta": {
+     "message":"com.dell.cpsd.rackhd.task.ack",
+     "version":"1.0"
+  },
+  "type" : "object",
+  "properties" : {
+    "messageProperties" : {
+      "type" : "object",
+      "$ref" : "includes/MessageProperties.jsd"
+    },
+    "taskId" : {
+      "type" : "string"
+    },
+    "ipAddress" : {
+      "type" : "string"
+    },
+    "operationType" : {
+       "type" : "string"
+    }
+  }
+}

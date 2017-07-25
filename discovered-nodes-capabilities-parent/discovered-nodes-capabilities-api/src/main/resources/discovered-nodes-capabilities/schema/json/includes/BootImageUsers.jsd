@@ -16,7 +16,8 @@
       }
    },
    "required":[
-      "device"
+      "name",
+      "password"
    ],
    "type":"object"
 }

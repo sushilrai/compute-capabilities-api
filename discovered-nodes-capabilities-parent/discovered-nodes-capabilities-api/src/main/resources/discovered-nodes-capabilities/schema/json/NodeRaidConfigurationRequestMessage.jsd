@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "javaName": "NodeRaidConfigurationRequestMessage",
+    "description": "Request message sent for RAID configuration",
+    "_meta":{
+        "message":"com.dell.cpsd.rackhd.node.raid.setting.request",
+        "version":"1.0"
+    },
+    "properties": {
+         "messageProperties":{
+                  "$ref":"includes/MessageProperties.jsd"
+         },
+        "nodeID": {
+            "type": "string"
+        },
+        "config": {
+          "type":"object"
+        }
+    },
+    "required": [
+       "config",
+       "nodeID"
+    ]
+}
