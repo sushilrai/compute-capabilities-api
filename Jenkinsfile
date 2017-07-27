@@ -4,7 +4,7 @@ UPSTREAM_JOBS_LIST = [
 ]
 UPSTREAM_JOBS = UPSTREAM_JOBS_LIST.join(',')
 
-pipeline {    
+pipeline {
     triggers {
         upstream(upstreamProjects: UPSTREAM_JOBS, threshold: hudson.model.Result.SUCCESS)
     }
@@ -49,13 +49,16 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when {
-                expression {
-                    return env.BRANCH_NAME ==~ /master|develop|release\/.*/
-                }
-            }
             steps {
-                sh "mvn deploy -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
+                script {
+                    if (env.BRANCH_NAME ==~ /stable.*/) {
+                        withCredentials([string(credentialsId: 'GPG-Dell-Key', variable: 'GPG_PASSPHRASE')]) {
+                            sh "mvn deploy -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true -Ppublish-release -Dgpg.passphrase=${GPG_PASSPHRASE} -Dgpg.keyname=73BD7C5F -DskipJavadoc=false -DskipJavasource=false"
+                        }
+                    } else {
+                        sh "mvn deploy -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
+                    }
+                }
             }
         }
         stage('SonarQube Analysis') {

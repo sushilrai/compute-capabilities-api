@@ -8,7 +8,11 @@
     <groupId>com.dell.converged.capabilities.compute</groupId>
     <artifactId>compute-capabilities-api</artifactId>
     <packaging>pom</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
+
+    <name>Compute Capabilities API</name>
+    <description>Compute Capabilities API project for Dell CPSD</description>
+    <url>https://github.com/dellemc-symphony/compute-capabilities-api</url>
 
     <parent>
         <groupId>com.dell.cpsd</groupId>
@@ -30,6 +34,66 @@
             <organization>com.dell.cpsd</organization>
             <organizationUrl>https://github.com/rousef42</organizationUrl>
         </developer>
+        <developer>
+            <name>Desmond Collins</name>
+            <email>desmond.collins@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/giddyelysium</organizationUrl>
+        </developer>
+        <developer>
+            <name>Robert Dubisz</name>
+            <email>robert.dubisz@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/RobertDubiszDell</organizationUrl>
+        </developer>
+        <developer>
+            <name>Jeff Cheng</name>
+            <email>jeffery.cheng@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/jccheng78</organizationUrl>
+        </developer>
+        <developer>
+            <name>Massarrah Tannous</name>
+            <email>massarrah.tannous@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/mtannous</organizationUrl>
+        </developer>
+        <developer>
+            <name>Megan Grasso</name>
+            <email>megan.grasso@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/grassm3</organizationUrl>
+        </developer>
+        <developer>
+            <name>Phani Kalagara</name>
+            <email>phani.kalagara@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/kalagp</organizationUrl>
+        </developer>
+        <developer>
+            <name>Manuel Murillo</name>
+            <email>manuel.murillo@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/murilm</organizationUrl>
+        </developer>
+        <developer>
+            <name>Purna Chamala</name>
+            <email>purna.chamala@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/chamap1</organizationUrl>
+        </developer>
+        <developer>
+            <name>James King</name>
+            <email>james.king@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/king-jam</organizationUrl>
+        </developer>
+        <developer>
+            <name>Jack Kenefick</name>
+            <email>jack.kenefick@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/jkenefick</organizationUrl>
+        </developer>
     </developers>
 
     <scm>
@@ -49,6 +113,17 @@
                 <artifactId>maven-gpg-plugin</artifactId>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>${project.basedir}</directory>
+                <includes>
+                    <include>LICENSE.md</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 
 </project>
