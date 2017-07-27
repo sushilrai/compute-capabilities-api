@@ -21,6 +21,7 @@ Verify that the following tools are installed:
 * Apache Maven 3.0.5+
 * Java Development Kit (version 8)
 
+
 ## Building
 Run the following command to build this project:
 ```bash
@@ -34,7 +35,7 @@ Contribute code and make submissions at the relevant GitHub repository level. Se
 
 ## Community
 Reach out to us on the Slack [#symphony][slack] channel by requesting an invite at [{code}Community][codecommunity].
- 
+
 You can also join [Google Groups][googlegroups] and start a discussion.
  
 [slack]: https://codecommunity.slack.com/messages/symphony

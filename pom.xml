@@ -9,11 +9,11 @@
     <artifactId>compute-capabilities-api</artifactId>
     <packaging>pom</packaging>
     <version>1.1.0-SNAPSHOT</version>
-    
+
     <name>Compute Capabilities API</name>
     <description>Compute Capabilities API project for Dell CPSD</description>
     <url>https://github.com/dellemc-symphony/compute-capabilities-api</url>
-    
+
     <parent>
         <groupId>com.dell.cpsd</groupId>
         <artifactId>root-parent</artifactId>

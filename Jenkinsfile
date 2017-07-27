@@ -4,7 +4,7 @@ UPSTREAM_JOBS_LIST = [
 ]
 UPSTREAM_JOBS = UPSTREAM_JOBS_LIST.join(',')
 
-pipeline {    
+pipeline {
     triggers {
         upstream(upstreamProjects: UPSTREAM_JOBS, threshold: hudson.model.Result.SUCCESS)
     }
