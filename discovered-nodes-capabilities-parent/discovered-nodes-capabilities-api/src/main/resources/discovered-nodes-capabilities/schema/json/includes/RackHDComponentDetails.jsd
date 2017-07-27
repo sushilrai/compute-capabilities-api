@@ -1,0 +1,21 @@
+{
+  "javaName" : "RackHDComponentDetails",
+  "type" : "object",
+  "id" : "RackHDComponentDetails.jsd",
+  "properties" : {
+    "componentUuid" : {
+      "type" : "string"
+    },
+    "location" : {
+      "type" : "object",
+      "$ref" : "GeoLocation.jsd"
+    },
+    "elementType" : {
+      "type" : "string"
+    }
+  },
+  "required" : [
+      "componentUuid",
+      "elementType"
+    ]
+}

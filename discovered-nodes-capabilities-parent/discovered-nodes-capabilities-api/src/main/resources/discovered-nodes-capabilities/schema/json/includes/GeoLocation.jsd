@@ -1,0 +1,13 @@
+{
+  "javaName" : "GeoLocation",
+  "type" : "object",
+  "id" : "GeoLocation.jsd",
+  "properties" : {
+    "country" : {
+      "type" : "string"
+    },
+    "city" : {
+      "type" : "string"
+    }
+  }
+}

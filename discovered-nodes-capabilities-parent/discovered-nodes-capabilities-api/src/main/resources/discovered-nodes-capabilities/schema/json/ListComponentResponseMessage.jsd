@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "ListComponentResponseMessage",
+  "description": "This message comes from the adapter and gets sent to dne-paqx",
+  "_meta": {
+     "message":"com.dell.cpsd.list.compute.component.response",
+     "version":"1.0"
+  },
+  "type" : "object",
+  "id" : "ListComponentResponseMessage.jsd",
+  "properties" : {
+    "messageProperties" : {
+      "type" : "object",
+      "$ref" : "includes/MessageProperties.jsd"
+    },
+    "type" : {
+      "type" : "string"
+    },
+    "rackHDComponentDetails" : {
+      "type" : "array",
+      "items": {
+        "type" : "object",
+        "$ref" : "includes/RackHDComponentDetails.jsd"
+      }
+    }
+  },
+  "required":[
+    "messageProperties"
+  ]
+}

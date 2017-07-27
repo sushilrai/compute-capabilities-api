@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "ListComponentRequestMessage",
+  "description": "This message comes from dne-paqx and gets translated into Southbound version of this message",
+  "_meta": {
+     "message":"com.dell.cpsd.list.compute.component.request",
+     "version":"1.0"
+  },
+  "type" : "object",
+  "id" : "ListComponentRequestMessage.jsd",
+  "properties" : {
+    "messageProperties" : {
+      "type" : "object",
+      "$ref" : "includes/MessageProperties.jsd"
+    }
+  },
+  "required":[
+     "messageProperties"
+  ]
+}
