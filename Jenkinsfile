@@ -1,6 +1,6 @@
 UPSTREAM_JOBS_LIST = [
-    "vce-symphony/common-dependencies/${env.BRANCH_NAME}",
-    "vce-symphony/common-messaging-parent/${env.BRANCH_NAME}"
+    "dellemc-symphony/common-dependencies/${env.BRANCH_NAME}",
+    "dellemc-symphony/common-messaging-parent/${env.BRANCH_NAME}"
 ]
 UPSTREAM_JOBS = UPSTREAM_JOBS_LIST.join(',')
 
@@ -71,15 +71,15 @@ pipeline {
 		doThirdPartyAudit()
             }
         }
-	stage('PasswordScan') {
+	    stage('PasswordScan') {
             steps {
 		doPwScan()
             }
-	}
+	    }
         stage('Github Release') {
             steps {
                 githubRelease()
-	    }
+	        }
         }
         stage('NexB Scan') {
             steps {
