@@ -17,7 +17,7 @@ pipeline {
     environment {
         GITHUB_TOKEN = credentials('github-02')
     }
-    options { 
+    options {
         skipDefaultCheckout()
         buildDiscarder(logRotator(artifactDaysToKeepStr: '30', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '5'))
         timestamps()
@@ -35,12 +35,12 @@ pipeline {
 	}
         stage('Compile') {
             steps {
-                sh "mvn install -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
+                sh "mvn clean install -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
             }
         }
         stage('Unit Testing') {
             steps {
-                sh "mvn test -Dmaven.repo.local=.repo"
+                sh "mvn verify -Dmaven.repo.local=.repo"
             }
         }
         stage('Record Test Results') {
@@ -63,28 +63,28 @@ pipeline {
         }
         stage('SonarQube Analysis') {
             steps {
-		doSonarAnalysis()
+                doSonarAnalysis()
             }
         }
         stage('Third Party Audit') {
             steps {
-		doThirdPartyAudit()
+                doThirdPartyAudit()
             }
         }
-	    stage('PasswordScan') {
-            steps {
-		doPwScan()
-            }
-	    }
         stage('Github Release') {
             steps {
                 githubRelease()
-	        }
+            }
         }
         stage('NexB Scan') {
             steps {
                 sh 'rm -rf .repo'
                 doNexbScanning()
+            }
+        }
+        stage('PasswordScan') {
+            steps {
+                doPwScan()
             }
         }
     }

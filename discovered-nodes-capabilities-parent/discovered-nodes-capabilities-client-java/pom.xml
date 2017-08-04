@@ -7,9 +7,9 @@
     <artifactId>discovered-nodes-capabilities-client-java</artifactId>
 
     <parent>
-        <groupId>com.dell.converged.capabilities.compute</groupId>
+        <groupId>com.dell.cpsd</groupId>
         <artifactId>discovered-nodes-capabilities-parent</artifactId>
-        <version>1.1.0</version>
+        <version>1.0.0</version>
     </parent>
 
     <licenses>
@@ -42,7 +42,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.dell.converged.capabilities.compute</groupId>
+            <groupId>com.dell.cpsd</groupId>
             <artifactId>discovered-nodes-capabilities-api</artifactId>
             <classifier>schemas</classifier>
             <type>zip</type>
@@ -70,7 +70,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>com.dell.converged.capabilities.compute</includeGroupIds>
+                            <includeGroupIds>com.dell.cpsd</includeGroupIds>
                             <includeArtifactIds>discovered-nodes-capabilities-api</includeArtifactIds>
                             <includes>**\/*.jsd</includes>
                         </configuration>
@@ -98,7 +98,7 @@
                         </goals>
                         <configuration>
                             <sourceDirectory>${project.build.directory}/dependency/discovered-nodes-capabilities/schema/json</sourceDirectory>
-                            <targetPackage>com.dell.converged.capabilities.compute.discovered.nodes.api</targetPackage>
+                            <targetPackage>com.dell.cpsd</targetPackage>
                             <outputDirectory>${project.build.directory}/generated-sources/discovered-nodes-capabilities</outputDirectory>
                             <removeOldOutput>true</removeOldOutput>
                             <generateBuilders>true</generateBuilders>

@@ -7,9 +7,9 @@
     <artifactId>discovered-nodes-capabilities-api</artifactId>
 
     <parent>
-        <groupId>com.dell.converged.capabilities.compute</groupId>
+        <groupId>com.dell.cpsd</groupId>
         <artifactId>discovered-nodes-capabilities-parent</artifactId>
-        <version>1.1.0</version>
+        <version>1.0.0</version>
     </parent>
 
     <licenses>
