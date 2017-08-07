@@ -1,12 +1,11 @@
-UPSTREAM_JOBS_LIST = [
-    "vce-symphony/common-dependencies/${env.BRANCH_NAME}",
-    "vce-symphony/common-messaging-parent/${env.BRANCH_NAME}"
-]
-UPSTREAM_JOBS = UPSTREAM_JOBS_LIST.join(',')
+UPSTREAM_TRIGGERS = getUpstreamTriggers([
+    "common-dependencies",
+    "common-messaging-parent"
+])
 
 pipeline {
     triggers {
-        upstream(upstreamProjects: UPSTREAM_JOBS, threshold: hudson.model.Result.SUCCESS)
+        upstream(upstreamProjects: UPSTREAM_TRIGGERS, threshold: hudson.model.Result.SUCCESS)
     }
     agent {
         node {
@@ -31,8 +30,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 doCheckout()
-	    }
-	}
+            }
+        }
         stage('Compile') {
             steps {
                 sh "mvn install -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
@@ -63,23 +62,23 @@ pipeline {
         }
         stage('SonarQube Analysis') {
             steps {
-		doSonarAnalysis()
+                doSonarAnalysis()
             }
         }
         stage('Third Party Audit') {
             steps {
-		doThirdPartyAudit()
+                doThirdPartyAudit()
             }
         }
-	stage('PasswordScan') {
+        stage('PasswordScan') {
             steps {
-		doPwScan()
+                doPwScan()
             }
-	}
+        }
         stage('Github Release') {
             steps {
                 githubRelease()
-	    }
+            }
         }
         stage('NexB Scan') {
             steps {
