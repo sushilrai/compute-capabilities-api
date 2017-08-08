@@ -1,12 +1,11 @@
-UPSTREAM_JOBS_LIST = [
-    "dellemc-symphony/common-dependencies/${env.BRANCH_NAME}",
-    "dellemc-symphony/common-messaging-parent/${env.BRANCH_NAME}"
-]
-UPSTREAM_JOBS = UPSTREAM_JOBS_LIST.join(',')
+UPSTREAM_TRIGGERS = getUpstreamTriggers([
+    "common-dependencies",
+    "common-messaging-parent"
+])
 
 pipeline {
     triggers {
-        upstream(upstreamProjects: UPSTREAM_JOBS, threshold: hudson.model.Result.SUCCESS)
+        upstream(upstreamProjects: UPSTREAM_TRIGGERS, threshold: hudson.model.Result.SUCCESS)
     }
     agent {
         node {
@@ -31,16 +30,16 @@ pipeline {
         stage('Checkout') {
             steps {
                 doCheckout()
-	    }
-	}
+            }
+        }
         stage('Compile') {
             steps {
-                sh "mvn clean install -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
+                sh "mvn install -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
             }
         }
         stage('Unit Testing') {
             steps {
-                sh "mvn verify -Dmaven.repo.local=.repo"
+                sh "mvn test -Dmaven.repo.local=.repo"
             }
         }
         stage('Record Test Results') {
@@ -71,6 +70,11 @@ pipeline {
                 doThirdPartyAudit()
             }
         }
+        stage('PasswordScan') {
+            steps {
+                doPwScan()
+            }
+        }
         stage('Github Release') {
             steps {
                 githubRelease()
@@ -80,11 +84,6 @@ pipeline {
             steps {
                 sh 'rm -rf .repo'
                 doNexbScanning()
-            }
-        }
-        stage('PasswordScan') {
-            steps {
-                doPwScan()
             }
         }
     }
