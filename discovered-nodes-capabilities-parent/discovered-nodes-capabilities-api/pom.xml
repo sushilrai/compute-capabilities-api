@@ -7,9 +7,9 @@
     <artifactId>discovered-nodes-capabilities-api</artifactId>
 
     <parent>
-        <groupId>com.dell.converged.capabilities.compute</groupId>
+        <groupId>com.dell.cpsd</groupId>
         <artifactId>discovered-nodes-capabilities-parent</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <licenses>
@@ -25,6 +25,12 @@
             <email>frank.rouse@dell.com</email>
             <organization>com.dell.cpsd</organization>
             <organizationUrl>https://github.com/rousef42</organizationUrl>
+        </developer>
+        <developer>
+            <name>Desmond Collins</name>
+            <email>desmond.collins@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/giddyelysium</organizationUrl>
         </developer>
     </developers>
 
@@ -95,24 +101,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${plugin-maven-compiler-version}</version>
-                <executions>
-                    <execution>
-                        <id>default-compile</id>
-                        <phase>none</phase>
-                    </execution>
-                </executions>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
-                <executions>
-                    <execution>
-                        <id>default-jar</id>
-                        <phase>none</phase>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -138,6 +132,17 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>${project.basedir}</directory>
+                <includes>
+                    <include>LICENSE.md</include>
+                </includes>
+            </resource>
+        </resources>             
     </build>
 
 </project>
