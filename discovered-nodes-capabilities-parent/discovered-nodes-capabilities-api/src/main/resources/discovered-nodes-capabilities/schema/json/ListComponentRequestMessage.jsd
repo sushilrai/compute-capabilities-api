@@ -12,9 +12,13 @@
     "messageProperties" : {
       "type" : "object",
       "$ref" : "includes/MessageProperties.jsd"
+    },
+    "credentials":{
+      "$ref":"includes/Credentials.jsd"
     }
   },
   "required":[
-     "messageProperties"
+     "messageProperties",
+     "credentials"
   ]
 }

@@ -16,11 +16,15 @@
     },
     "ipAddress": {
         "type": "string"
+    },
+    "credentials":{
+      "$ref":"includes/Credentials.jsd"
     }
   },
   "required": [
     "messageProperties",
     "nodeID",
-    "ipAddress"
+    "ipAddress",
+    "credentials"
   ]
 }

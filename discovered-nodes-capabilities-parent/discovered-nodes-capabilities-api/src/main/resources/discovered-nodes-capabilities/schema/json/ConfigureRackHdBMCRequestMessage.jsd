@@ -18,12 +18,16 @@
        },
        "nodeId" : {
           "type": "string"
+       },
+       "credentials":{
+         "$ref":"includes/Credentials.jsd"
        }
     },
     "required":[
        "messageProperties",
        "username",
        "password",
-       "nodeId"
+       "nodeId",
+       "credentials"
     ]
 }

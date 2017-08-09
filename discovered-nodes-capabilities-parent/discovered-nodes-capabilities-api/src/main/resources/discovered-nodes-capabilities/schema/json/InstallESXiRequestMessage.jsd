@@ -12,10 +12,14 @@
        },
        "esxiInstallationInfo":{
           "$ref":"includes/ESXIInstallationInfo.jsd"
+       },
+       "credentials":{
+         "$ref":"includes/Credentials.jsd"
        }
     },
     "required":[
        "messageProperties",
-       "esxiInstallationInfo"
+       "esxiInstallationInfo",
+       "credentials"
     ]
 }
