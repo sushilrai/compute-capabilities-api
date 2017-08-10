@@ -27,7 +27,6 @@
        "messageProperties",
        "username",
        "password",
-       "nodeId",
-       "credentials"
+       "nodeId"
     ]
 }

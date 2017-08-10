@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
  
 ### Added
+ - Add in the credentials object.  Contains all fields for DNE and FRU (backwards compatible).  Field is not mandatory.
 ### Changed
 ### Removed
  

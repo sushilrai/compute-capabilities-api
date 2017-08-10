@@ -21,8 +21,5 @@
     },
     "required": [
         "service",
-        "nodeID",
-        "credentials"
-    ]
-
+        "nodeID"
 }

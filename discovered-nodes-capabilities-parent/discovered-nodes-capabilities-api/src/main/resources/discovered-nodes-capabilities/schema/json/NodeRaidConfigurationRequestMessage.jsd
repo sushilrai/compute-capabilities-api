@@ -23,7 +23,6 @@
     },
     "required": [
        "config",
-       "nodeID",
-       "credentials"
+       "nodeID"
     ]
 }

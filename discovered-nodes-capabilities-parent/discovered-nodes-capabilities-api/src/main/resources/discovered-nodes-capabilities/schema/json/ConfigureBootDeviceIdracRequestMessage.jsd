@@ -24,7 +24,6 @@
   "required": [
     "messageProperties",
     "nodeID",
-    "ipAddress",
-    "credentials"
+    "ipAddress"
   ]
 }

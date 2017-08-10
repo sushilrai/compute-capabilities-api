@@ -19,7 +19,6 @@
     },
     "required":[
        "messageProperties",
-       "esxiInstallationInfo",
-       "credentials"
+       "esxiInstallationInfo"
     ]
 }
