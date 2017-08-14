@@ -1,0 +1,23 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Request message sent to configure Redfish Alerting",
+    "_meta":{
+       "message":"queue.controlplane.hardware.set.redfish.alerting.config",
+       "version":"1.0"
+    },
+    "properties":{
+        "messageProperties":{
+          "$ref":"includes/MessageProperties.jsd"
+        },
+        "options":{
+          "$ref":"includes/RedfishOptions.jsd"
+        },
+        "nodeId": {
+            "type": "string"
+        }
+    },
+    "required":[
+       "nodeId"
+    ]
+}

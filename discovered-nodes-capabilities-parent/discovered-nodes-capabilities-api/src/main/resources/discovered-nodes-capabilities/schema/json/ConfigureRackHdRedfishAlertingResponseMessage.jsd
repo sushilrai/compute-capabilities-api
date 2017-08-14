@@ -1,0 +1,28 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Request message sent to configure BMC Credentials",
+    "_meta":{
+       "message":"controlplane.hardware.set.redfish.alerting.config.response",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"includes/MessageProperties.jsd"
+       },
+       "status": {
+          "enum": [
+            "SUCCESS",
+            "FAILED"
+          ],
+          "type": "string"
+       },
+       "message": {
+          "type": "string"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "status"
+    ]
+}

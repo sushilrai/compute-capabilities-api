@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "redfish-subscription",
+  "additionalProperties" : true,
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "credential": {
+      "$ref":"Credentials.jsd"
+    },
+    "data": {
+       "$ref":"RedfishSubscriptionData.jsd"
+    }
+  },
+  "required": [
+    "url",
+    "credential",
+    "data"
+   ],
+  "type": "object"
+}

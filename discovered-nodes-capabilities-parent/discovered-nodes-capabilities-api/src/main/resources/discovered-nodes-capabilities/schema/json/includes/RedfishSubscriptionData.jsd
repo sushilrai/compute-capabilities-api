@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "RedfishSubscriptionData",
+  "additionalProperties" : true,
+  "properties": {
+    "Context": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Destination": {
+      "type": "string"
+    },
+    "EventTypes":{
+      "items":{
+        "type":"string"
+      },
+      "type":"array"
+    },
+    "Id": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Protocol": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
