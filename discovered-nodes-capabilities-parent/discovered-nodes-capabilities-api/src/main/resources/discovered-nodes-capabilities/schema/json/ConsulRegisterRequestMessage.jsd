@@ -12,6 +12,9 @@
        },
        "registrationInfo":{
           "$ref":"includes/RegistrationInfo.jsd"
+       },
+       "credentials":{
+         "$ref":"includes/Credentials.jsd"
        }
     },
     "required":[

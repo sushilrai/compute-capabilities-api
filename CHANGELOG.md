@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
  
 ### Added
+ - Credentials object which contain all fields for DNE and FRU (backwards compatible). This field is not mandatory.
 ### Changed
  - Update GroupID identifier for common-messaging-parent.
 ### Removed

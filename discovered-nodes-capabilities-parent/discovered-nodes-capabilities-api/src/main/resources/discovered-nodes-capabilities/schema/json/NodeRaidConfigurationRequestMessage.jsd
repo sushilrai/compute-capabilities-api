@@ -16,6 +16,9 @@
         },
         "config": {
           "type":"object"
+        },
+        "credentials":{
+          "$ref":"includes/Credentials.jsd"
         }
     },
     "required": [
