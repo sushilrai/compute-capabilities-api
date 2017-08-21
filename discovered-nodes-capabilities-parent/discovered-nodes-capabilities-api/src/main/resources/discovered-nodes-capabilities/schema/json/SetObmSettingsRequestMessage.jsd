@@ -11,6 +11,7 @@
                   "$ref":"includes/MessageProperties.jsd"
          },
         "nodeID": {"type": "string"},
+        "nodeMACAddress": {"type": "string"},
         "obmConfig": {
           "$ref":"includes/ObmConfig.jsd"
         },
@@ -20,7 +21,6 @@
         }
     },
     "required": [
-        "service",
-        "nodeID"
+        "service"
     ]
 }
