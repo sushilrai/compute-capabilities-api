@@ -7,13 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
  
 ### Added
- - Credentials object which contain all fields for DNE and FRU (backwards compatible). This field is not mandatory.
+ - Credentials object that contain all fields for DNE and FRU (backwards compatible). This field is not mandatory.
 ### Changed
- - Update GroupID identifier for common-messaging-parent.
-### Removed
+ - The GroupID identifier for common-messaging-parent.
  
 ## [1.0.0] - 2017-08-08
 ### Added
- - Release of the initial compute-capabilities-api binary files.
+ - The initial compute-capabilities-api binary files.
 
 [Unreleased]: https://github.com/dellemc-symphony/compute-capabilities-api/compare/1.0.0...HEAD
