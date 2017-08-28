@@ -13,8 +13,8 @@
        },
        "status": {
            "enum": [
-               "SUCCESS",
-               "FAILED"
+               "succeeded",
+               "failed"
            ],
            "type": "string"
        }
