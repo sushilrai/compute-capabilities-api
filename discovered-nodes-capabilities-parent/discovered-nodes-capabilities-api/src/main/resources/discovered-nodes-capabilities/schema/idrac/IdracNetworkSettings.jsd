@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties" : false,
   "properties": {
-    "nodeId": {
+    "uuid": {
       "type": "string"
     },
     "ipAddress": {
@@ -17,7 +17,7 @@
   },
   "type": "object",
   "required": [
-    "nodeId",
+    "uuid",
     "ipAddress",
     "netmask",
     "gateway"

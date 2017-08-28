@@ -2,9 +2,6 @@
   "type": "object",
   "additionalProperties" : false,
   "properties": {
-    "nodeId": {
-      "type": "string"
-    },
     "convergedUuid": {
       "type": "string"
     },
@@ -19,7 +16,6 @@
     }
   },
   "required": [
-    "nodeId",
     "symphonyUuid"
   ]
 }
