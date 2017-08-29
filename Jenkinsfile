@@ -52,7 +52,11 @@ pipeline {
                 junit '**/target/*-reports/*.xml'
             }
         }
-        
+       stage('PasswordScan') {
+            steps {
+                doPwScan()
+            }
+        } 
        stage('Deploy') {
              steps {
                doMvnDeploy()
@@ -67,11 +71,6 @@ pipeline {
         stage('Third Party Audit') {
             steps {
                 doThirdPartyAudit()
-            }
-        }
-        stage('PasswordScan') {
-            steps {
-                doPwScan()
             }
         }
         stage('Github Release') {
