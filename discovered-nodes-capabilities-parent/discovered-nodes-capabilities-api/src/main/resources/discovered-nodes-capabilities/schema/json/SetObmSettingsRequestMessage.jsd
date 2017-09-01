@@ -10,6 +10,7 @@
          "messageProperties":{
                   "$ref":"includes/MessageProperties.jsd"
          },
+        "uuid": {"type": "string"},
         "nodeID": {"type": "string"},
         "nodeMACAddress": {"type": "string"},
         "obmConfig": {
