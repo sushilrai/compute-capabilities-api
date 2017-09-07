@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Request message sent for Configure Pxe Boot",
+  "_meta": {
+    "message": "com.dell.cpsd.configure.pxeboot.request",
+    "version": "1.0"
+  },
+  "properties": {
+    "messageProperties": {
+      "$ref": "includes/MessageProperties.jsd"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "nodeID": {
+      "type": "string"
+    },
+    "ipAddress": {
+      "type": "string"
+    },
+    "pxeBootConfig": {
+      "$ref": "includes/PxeBootConfig.jsd"
+    }
+  },
+  "required": [
+    "ipAddress",
+    "pxeBootConfig"
+  ]
+}

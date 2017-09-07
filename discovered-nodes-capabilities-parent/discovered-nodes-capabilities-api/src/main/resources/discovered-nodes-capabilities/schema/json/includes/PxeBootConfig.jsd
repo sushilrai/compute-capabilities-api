@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaName": "PxeBootConfig",
+  "additionalProperties": true,
+  "properties": {
+    "shareName": {
+      "type": "string"
+    },
+    "shareType": {
+      "type": "integer"
+    },
+    "protoName": {
+      "type": "string"
+    },
+    "protoValue": {
+      "type": "string"
+    },
+    "nicFqdds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "shareName",
+    "shareType",
+    "protoName",
+    "protoValue",
+    "nicFqdds"
+  ],
+  "type": "object"
+}

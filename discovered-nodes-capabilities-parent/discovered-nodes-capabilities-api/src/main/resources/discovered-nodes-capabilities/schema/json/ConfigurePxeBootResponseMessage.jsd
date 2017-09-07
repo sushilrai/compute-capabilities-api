@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties" : false,
+  "_meta": {
+    "message": "com.dell.cpsd.configure.pxeboot.response",
+    "version": "1.0",
+    "stereotype": "RESPONSE"
+  },
+  "properties":{
+    "messageProperties": {
+      "$ref": "includes/MessageProperties.jsd"
+    },
+    "status": {
+      "enum": [
+        "SUCCESS",
+        "FAILED"
+      ],
+      "type": "string"
+    },
+    "configurePxeBootErrors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        } 
+      }
+    }
+  },
+  "required":[
+    "messageProperties",
+    "status"
+  ]
+}
