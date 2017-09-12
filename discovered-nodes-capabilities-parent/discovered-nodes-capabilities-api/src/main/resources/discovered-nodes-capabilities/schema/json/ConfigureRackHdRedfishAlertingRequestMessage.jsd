@@ -13,11 +13,17 @@
         "options":{
           "$ref":"includes/RedfishOptions.jsd"
         },
+        "nodeMACAddress": {
+            "type": "string"
+        },
         "nodeId": {
             "type": "string"
+        },
+        "credentials":{
+          "$ref":"includes/Credentials.jsd"
         }
     },
     "required":[
-       "nodeId"
+       "credentials"
     ]
 }
