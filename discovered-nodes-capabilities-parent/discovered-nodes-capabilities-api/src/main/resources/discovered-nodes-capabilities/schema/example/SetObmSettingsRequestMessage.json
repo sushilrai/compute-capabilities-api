@@ -12,7 +12,10 @@
     "protocol": "https",
     "uri": "10.240.19.130"
   },
-  "service": "redfish-obm-service",
+  "services": [
+    "redfish-obm-service",
+    "ipmi-obm-service"
+  ],
   "nodeID": "59022f3778b7113d2dd8180f",
   "credentials":{}
 }
