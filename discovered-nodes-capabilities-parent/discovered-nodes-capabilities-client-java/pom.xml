@@ -103,7 +103,7 @@
                             <removeOldOutput>true</removeOldOutput>
                             <generateBuilders>true</generateBuilders>
                             <includeConstructors>true</includeConstructors>
-                            <serializable>false</serializable>
+                            <serializable>true</serializable>
                             <useCommonsLang3>true</useCommonsLang3>
                             <includeAdditionalProperties>true</includeAdditionalProperties>
                             <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator</customAnnotator>
