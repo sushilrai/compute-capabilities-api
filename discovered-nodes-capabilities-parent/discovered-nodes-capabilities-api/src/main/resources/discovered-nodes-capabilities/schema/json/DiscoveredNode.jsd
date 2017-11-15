@@ -5,6 +5,15 @@
     "convergedUuid": {
       "type": "string"
     },
+    "serial": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "vendor": {
+      "type": "string"
+    },
     "allocationStatus": {
       "enum": [
          "DISCOVERED",

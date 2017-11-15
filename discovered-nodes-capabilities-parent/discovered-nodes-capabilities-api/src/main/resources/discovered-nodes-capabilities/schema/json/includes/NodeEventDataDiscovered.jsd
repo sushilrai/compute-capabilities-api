@@ -14,7 +14,16 @@
     },
     "nodeType": {
       "type": "string"
-    }
+    },
+    "serial": {
+       "type": "string"
+    },
+    "product": {
+       "type": "string"
+    },
+     "vendor": {
+       "type": "string"
+     }
   },
   "type": "object",
   "extends" : {
