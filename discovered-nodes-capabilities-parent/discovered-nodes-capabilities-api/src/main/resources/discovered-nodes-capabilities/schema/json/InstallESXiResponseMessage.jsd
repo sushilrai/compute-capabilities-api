@@ -1,7 +1,7 @@
 {
     "$schema":"http://json-schema.org/draft-04/schema#",
     "type":"object",
-    "description":"Response message sent to install ESxi.",
+    "description":"Response message sent to install ESXi.",
     "_meta":{
        "message":"cpsd.controlplane.hardware.esxi.install.response",
        "version":"1.0"
@@ -11,7 +11,10 @@
           "$ref":"includes/MessageProperties.jsd"
        },
        "state":{"type": "string"},
-       "status":{"type": "string"}
+       "status":{"type": "string"},
+       "installEsxiErrorDescription": {
+          "type": "string"
+       }
     },
     "required":[
        "messageProperties",
