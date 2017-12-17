@@ -11,7 +11,7 @@
       "$ref" : "includes/MessageProperties.jsd"
     },
     "nodeInventory": {
-        "javaType": "java.lang.Object"
+      "javaType": "java.util.Map<String, Object>"
     }
   },
   "required": [
