@@ -16,6 +16,9 @@
             "javaType":"java.math.BigDecimal"
          },
          "type":"array"
+      },
+      "mtu":{
+        "type":"integer"
       }
    },
    "required":[
