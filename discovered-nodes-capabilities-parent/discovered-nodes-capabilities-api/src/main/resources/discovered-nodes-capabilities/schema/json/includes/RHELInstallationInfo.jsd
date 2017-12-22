@@ -1,0 +1,87 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "properties":{
+      "domain":{
+         "type":"string"
+      },
+      "kargs":{
+         "type":"string"
+      },
+      "hostname":{
+         "type":"string"
+      },
+      "installDisk":{
+         "type":"string"
+      },
+      "repo":{
+         "type":"string"
+      },
+      "rootPassword":{
+         "type":"string"
+      },
+      "rootSshKey":{
+         "type":"string"
+      },
+      "version":{
+         "type":"string"
+      },
+      "osName":{
+         "type":"string"
+      },
+      "identifier":{
+         "type":"string"
+      },
+      "dnsServers":{
+         "items":{
+            "type":"string"
+         },
+         "type":"array"
+      },
+      "ntpServers":{
+         "items":{
+            "type":"string"
+         },
+         "type":"array"
+      },
+      "networkDevices":{
+         "items":{
+            "$ref":"BootImageNetworkDevice.jsd"
+         },
+         "type":"array"
+      },
+      "users":{
+         "items":{
+            "$ref":"BootImageUsers.jsd"
+         },
+         "type":"array"
+      },
+      "packages": {
+          "items":{
+              "type":"string"
+          },
+          "type":"array"
+      },
+      "enableServices": {
+          "items":{
+            "type":"string"
+          },
+          "type":"array"
+      },
+      "disableServices": {
+          "items":{
+            "type":"string"
+          },
+          "type":"array"
+      },
+      "bonds": {
+          "items": {
+            "ref":"BondedNetworkDevice.jsd"
+          },
+          "type":"array"
+      }
+   },
+   "required":[
+      "identifier"
+   ],
+   "type":"object"
+}

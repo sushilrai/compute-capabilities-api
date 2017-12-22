@@ -1,0 +1,24 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Response message sent to install RHEL.",
+    "_meta":{
+       "message":"cpsd.controlplane.hardware.rhel.install.response",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"includes/MessageProperties.jsd"
+       },
+       "state":{"type": "string"},
+       "status":{"type": "string"},
+       "installRHELErrorDescription": {
+          "type": "string"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "state",
+       "status"
+    ]
+}
