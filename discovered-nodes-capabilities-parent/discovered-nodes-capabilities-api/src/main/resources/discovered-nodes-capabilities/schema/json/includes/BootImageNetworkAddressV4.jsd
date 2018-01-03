@@ -15,14 +15,15 @@
          "items":{
             "javaType":"java.math.BigDecimal"
          },
-         "type":"array"
+         "type":"array",
+         "default":null
       },
       "mtu":{
-        "type":"integer"
+        "type":"integer",
+        "default":null
       }
    },
    "required":[
-
    ],
    "type":"object"
 }
