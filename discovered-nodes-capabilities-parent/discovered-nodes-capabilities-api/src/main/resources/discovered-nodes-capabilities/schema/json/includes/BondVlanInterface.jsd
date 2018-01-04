@@ -1,25 +1,19 @@
 {
    "$schema":"http://json-schema.org/draft-04/schema#",
-   "javaName":"BondedNetworkDevice",
+   "javaName":"BootImageNetworkDevice",
    "properties":{
-      "device":{
-         "type":"string"
+      "vlanid":{
+         "type":"integer"
       },
       "ipv4":{
          "$ref":"BootImageNetworkAddressV4.jsd"
       },
       "ipv6":{
          "$ref":"BootImageNetworkAddressV6.jsd"
-      },
-      "nics":{
-         "type":"array"
-      },
-      "bondvlaninterface":{
-          "$ref":"BondVlanInterface.jsd"
       }
    },
    "required":[
-      "device"
+      "vlanid"
    ],
    "type":"object"
 }
