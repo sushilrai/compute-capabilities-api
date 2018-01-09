@@ -8,7 +8,7 @@
     <groupId>com.dell.cpsd</groupId>
     <artifactId>compute-capabilities-api</artifactId>
     <packaging>pom</packaging>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 
     <name>Compute Capabilities API</name>
     <description>Compute Capabilities API project for Dell CPSD</description>
@@ -17,7 +17,7 @@
     <parent>
         <groupId>com.dell.cpsd</groupId>
         <artifactId>root-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.1.0</version>
     </parent>
 
     <licenses>
