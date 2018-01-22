@@ -19,7 +19,8 @@
          "DISCOVERED",
          "ADDED",
          "RESERVED",
-         "FAILED"
+         "FAILED",
+         "PROVISIONING_IN_PROGRESS"
        ],
        "type": "string"
     }
