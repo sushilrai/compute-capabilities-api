@@ -2,7 +2,7 @@
    "$schema":"http://json-schema.org/draft-04/schema#",
    "javaName":"BondedNetworkDevice",
    "properties":{
-      "device":{
+      "name":{
          "type":"string"
       },
       "ipv4":{
@@ -19,7 +19,7 @@
       }
    },
    "required":[
-      "device"
+      "name"
    ],
    "type":"object"
 }
