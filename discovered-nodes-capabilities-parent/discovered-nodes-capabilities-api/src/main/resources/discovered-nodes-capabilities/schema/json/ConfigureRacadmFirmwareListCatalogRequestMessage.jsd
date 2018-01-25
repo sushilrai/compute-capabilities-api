@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Request message for racadm firmare list catalog",
+  "javaName": "ConfigureRacadmFirmwareListCatalogRequestMessage",
+  "_meta":{
+    "message":"com.dell.cpsd.configure.racadm.firmware.list.catalog.request",
+    "version":"1.0"
+  },
+  "properties": {
+    "messageProperties":{
+      "$ref":"includes/MessageProperties.jsd"
+      },
+    "componentUuid": {
+      "type": "string"
+    },
+    "macAddress": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "componentUuid",
+    "macAddress"
+  ]
+}

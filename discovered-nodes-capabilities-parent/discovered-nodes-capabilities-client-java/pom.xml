@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.dell.cpsd</groupId>
         <artifactId>discovered-nodes-capabilities-parent</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>0.1.0-SNAPSHOT</version>
     </parent>
 
     <licenses>
@@ -40,6 +40,11 @@
         <url>https://github.com/dellemc-symphony/compute-capabilities-api/tree/master</url>
     </scm>
 
+    <properties>
+        <common-rabbitmq.version>0.1.0-SNAPSHOT</common-rabbitmq.version>
+        <common-contract-enricher.version>0.1.0-SNAPSHOT</common-contract-enricher.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.dell.cpsd</groupId>
@@ -51,7 +56,7 @@
         <dependency>
             <groupId>com.dell.cpsd</groupId>
             <artifactId>common-rabbitmq</artifactId>
-            <version>2.0.0</version>
+            <version>${common-rabbitmq.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -86,7 +91,7 @@
                     <dependency>
                         <groupId>com.dell.cpsd</groupId>
                         <artifactId>common-contract-enricher</artifactId>
-                        <version>2.0.0</version>
+                        <version>${common-contract-enricher.version}</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -122,7 +127,7 @@
                     <dependency>
                         <groupId>com.dell.cpsd</groupId>
                         <artifactId>common-contract-enricher</artifactId>
-                        <version>2.0.0</version>
+                        <version>${common-contract-enricher.version}</version>
                     </dependency>
                 </dependencies>
                 <executions>
